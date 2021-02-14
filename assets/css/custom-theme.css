@@ -1,0 +1,66 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background: rgb(0, 0, 0);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(116, 45, 167) 100%);
+}
+
+.glassPanel {
+    background-color: rgba(0,0,0,0.65);
+}
+
+.animatedZoom {
+    transition: transform .2s;
+    /* Animation */
+}
+
+.animatedZoom:hover {
+    transform: scale(1.5);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.whiteBorder {
+    border: 3px solid #fff;
+}
+
+/* Rounded Corner FX */
+/* 0,0,0,0 - top left, top right, bottom right, bottom left */
+.rcTopLeft      {border-radius: 10px  0px  0px  0px;}
+.rcTopRight     {border-radius:  0px 10px  0px  0px;}
+.rcBottomLeft   {border-radius:  0px  0px  0px 10px;}
+.rcBottomRight  {border-radius: 10px  0px 10px  0px;}
+
+.rcTop          {border-radius: 10px 10px  0px  0px;}
+.rcBottom       {border-radius:  0px  0px 10px 10px;}
+
+.rcLeft         {border-radius: 10px  0px  0px 10px;}
+.rcRight        {border-radius:  0px 10px 10px  0px;}
+
+.roundedCorners {border-radius: 10px 10px 10px 10px;}
+.rcNone         {border-radius:  0px  0px  0px  0px;}
+
+.pulseEffect {
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+    }
+}
