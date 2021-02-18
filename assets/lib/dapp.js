@@ -1,6 +1,6 @@
 // CONSTANTS
-var contractAddress = '0x711B0c1e1cA0B15D1b4d50660C9dAE38F7228E49'; // C3D
-var pricefloorAddress = '0xCFad90961753639456021685d855Cc77F13AD887';
+var contractAddress = '0xd9F3b33f000B98f093870Cf4d4BB936bB6A05AeB'; // C3D
+var pricefloorAddress = '0xBb1FD4c4Ff155FC45ac6E141973D7942CbB8dAF4';
 
 // GLOBALS
 var web3Mode = null;
