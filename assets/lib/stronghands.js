@@ -272,20 +272,24 @@ function startDapp() {
 function myStrongHand() {
     strongHandsManagerInstance.isStrongHand((error, isStrongHand) => {
         if (isStrongHand) {
-            $("#myDataPanel").show();
-            $("#buyPanel").show();
-            $("#actionPanel").show();
-            $("#lockPanel").show();
+            el('#mystronghand').innerHTML = '<table><thead><tr><th>Contract Address</th><th>Balance</th><th>Dividends</th><th>Status</th><th>Total Lock Time (days)</th><th>Created</th></tr></thead><tbody><tr><td id="address"></td><td id="myp3dbalance"></td><td id="mydividends"></td><td id="mystatus"></td><td id="locktime"></td><td id="created"></td></tr></tbody></table>';
+
+            el('#mystronghand').innerHTML += '<input id="buyamount" type="number" placeholder="Amount to spend (ETH)"/>'
+            el('#mystronghand').innerHTML += ' <button type="button" onclick="buyP3D()">Buy/Lock up P3D</button>'
+            el('#mystronghand').innerHTML += ' <button type="button" onclick="withdrawDividends()">Withdraw Dividends</button>'
+            el('#mystronghand').innerHTML += ' <button type="button" onclick="reinvestDividends()">Reinvest Dividends</button>'
+            el('#mystronghand').innerHTML += ' <input id="extendlocktime" type="number" placeholder="lock time (days)" min="1"step="1"/>'
+            el('#mystronghand').innerHTML += ' <button type="button" onclick="extendLock()">Extend Lock Time</button>'
 
             strongHandsManagerInstance.myStrongHand((error, myStrongHandAddress) => {
                 el('#address').innerHTML = myStrongHandAddress;
 
                 myStrongHandInstance = strongHandContract.at(myStrongHandAddress);
                 myStrongHandInstance.balanceOf((error, myP3dBalance) => {
-                    el('#myp3dbalance').innerHTML = web3.fromWei(myP3dBalance, 'ether').toFixed(6) + ' B1VS';
+                    el('#myp3dbalance').innerHTML = web3.fromWei(myP3dBalance, 'ether').toFixed(6) + ' P3D';
                 });
                 myStrongHandInstance.dividendsOf((error, myDividends) => {
-                    el('#mydividends').innerHTML = web3.fromWei(myDividends, 'ether').toFixed(6) + ' BNB';
+                    el('#mydividends').innerHTML = web3.fromWei(myDividends, 'ether').toFixed(6) + ' ETH';
                 });
                 myStrongHandInstance.isLocked((error, isLocked) => {
                     if (isLocked) {
@@ -294,7 +298,7 @@ function myStrongHand() {
                         });
                     } else {
                         el('#mystatus').innerHTML = '<b>UNLOCKED</b>';
-                        el('#mystronghand').innerHTML += ' <input id="sellamount" type="number" placeholder="Amount to sell (B1VS)"/>'
+                        el('#mystronghand').innerHTML += ' <input id="sellamount" type="number" placeholder="Amaount to sell (P3D)"/>'
                         el('#mystronghand').innerHTML += ' <button type="button" onclick="sell()">Sell P3D</button>'
                     }
                 });
@@ -308,8 +312,8 @@ function myStrongHand() {
             });
 
         } else {
-            el('#mystronghand').innerHTML = '<input id="locktime" type="number" placeholder="LOCK TIME (days)" min="0"step="1" class="form-control roundedCorners" /><br />'
-            el('#mystronghand').innerHTML += '<button type="button" onclick="getStrong()" class="btn btn-block btn-success roundedCorners">Become a Strong Hand!</button>'
+            el('#mystronghand').innerHTML = '<input id="locktime" type="number" placeholder="LOCK TIME (days)" min="0"step="1"/>'
+            el('#mystronghand').innerHTML += '<button type="button" onclick="getStrong()">Become a Strong Hand!</button>'
         }
     });
 }
@@ -368,7 +372,7 @@ function buyP3D() {
         value: web3.toWei(el('#buyamount').value, 'ether')
     }, (error, result) => {
         if (!error) {
-            alertify.success("Buying B1VS shares, please wait...");
+            alertify.success("Buying B1VS Shares, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }
@@ -378,7 +382,7 @@ function buyP3D() {
 function withdrawDividends() {
     myStrongHandInstance.withdrawDividends((error, result) => {
         if (!error) {
-            alertify.success("Withdrawing Dividends, please wait...");
+            alertify.success("Buying B1VS Shares, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }
@@ -388,7 +392,7 @@ function withdrawDividends() {
 function reinvestDividends() {
     myStrongHandInstance.reinvest((error, result) => {
         if (!error) {
-            alertify.success("Reinvesting Dividends, please wait...");
+            alertify.success("Buying B1VS Shares, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }
@@ -398,7 +402,7 @@ function reinvestDividends() {
 function extendLock() {
     myStrongHandInstance.extendLock(el('#extendlocktime').value, (error, result) => {
         if (!error) {
-            alertify.success("Extending Gauntlet Time, please wait...");
+            alertify.success("Buying B1VS Shares, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }
@@ -408,7 +412,7 @@ function extendLock() {
 function sell() {
     myStrongHandInstance.sell(web3.toWei(el('#sellamount').value, 'ether'), (error, result) => {
         if (!error) {
-            alertify.success("Selling B1VS shares, please wait...");
+            alertify.success("Buying B1VS Shares, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }

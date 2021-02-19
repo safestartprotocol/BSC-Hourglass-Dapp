@@ -114,55 +114,9 @@
             </div>
 
             <div class="row">
-                <div class="col text-center" id="myDataPanel">
+                <div class="col text-center">
                     <h3>My Gauntlet</h3>
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr class="table-dark">
-                                <th>Contract</th>
-                                <th>Balance</th>
-                                <th>Dividends</th>
-                                <th>Status</th>
-                                <th>Days</th>
-                                <th>Created</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="address"></td>
-                                <td id="myp3dbalance"></td>
-                                <td id="mydividends"></td>
-                                <td id="mystatus"></td>
-                                <td id="locktime"></td>
-                                <td id="created"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col text-center" id="buyPanel">
-                    <h3>Buy &amp; Lock up B1VS shares</h3>
-                    <input id="buyamount" type="number" placeholder="Amount to spend (BNB) " class="form-control roundedCorners" /><br />
-                    <button type="button" onclick="buyP3D()" class="btn btn-block btn-success roundedCorners">Buy/Lock up B1VS shares</button>
-                </div>
-
-                <div class="col text-center" id="lockPanel">
-                    <h3>Extend Lock Time</h3>
-                    <input id="extendlocktime" type="number" placeholder="Lock time (days)" min="1" step="1" class="form-control roundedCorners" /><br />
-                    <button type="button" onclick="extendLock()" class="btn btn-block btn-success roundedCorners">Extend Lock Time</button>
-                </div>
-            </div>
-            <hr />
-
-            <div class="row" id="actionPanel">
-                <div class="col text-center">
-                    <button type="button" onclick="reinvestDividends()" class="btn btn-block btn-warning roundedCorners">Reinvest Dividends</button>
-                </div>
-
-                <div class="col text-center">
-                    <button type="button" onclick="withdrawDividends()" class="btn btn-block btn-danger roundedCorners">Withdraw Dividends</button>
+                    <span id="mystronghand"></span>
                 </div>
             </div>
             <hr />
@@ -233,13 +187,6 @@
     <script src="assets/js/web3.min.js"></script>
 
     <!-- Contract Scripts -->
-    <script>
-        $("#actionPanel").hide();
-        $("#myDataPanel").hide();
-        $("#buyPanel").hide();
-        $("#lockPanel").hide();
-
-    </script>
     <script type="text/javascript" src="assets/lib/stronghands.js"></script>
 </body>
 

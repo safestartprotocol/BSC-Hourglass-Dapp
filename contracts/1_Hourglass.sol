@@ -14,7 +14,7 @@ pragma solidity 0.6.12;
  * v 1.0.0
  * B1VS - Hourglass deployed on Binance Smart Chain (BSC)
  * 
- * -> Added 'Total Referrals', 'Total Referral Earnings', 'Total Deposited', 'Total Withdrawn' and 'CurrentPosition' view functions & mappings
+ * -> Added 'Total Referrals', 'Total Referral Earnings' view functions & mappings
  * -> Where 0x0 would be referrer in regular ETH-based hourglass contracts, deployer is now referrer.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
