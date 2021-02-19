@@ -1,6 +1,5 @@
 // CONSTANTS
-var contractAddress = '0x0c22C33eaEFC961Ed529a6Af4654B6c2f51c12D3'; // C3D
-var pricefloorAddress = '0xBb1FD4c4Ff155FC45ac6E141973D7942CbB8dAF4';
+var contractAddress = '0x0c22C33eaEFC961Ed529a6Af4654B6c2f51c12D3';
 
 // GLOBALS
 var web3Mode = null;
@@ -474,51 +473,7 @@ var abi = [{
     "stateMutability": "payable",
     "type": "receive"
 }];
-var pricefloorABI = [{
-    "inputs": [{
-        "internalType": "address",
-        "name": "_hourglass",
-        "type": "address"
-    }],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
-}, {
-    "inputs": [],
-    "name": "hourglassAddress",
-    "outputs": [{
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "pricefloorBalance",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "pricefloorDividends",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "raiseTheFloor",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-}];
+
 // UTILITY FUNCTIONS
 if (!String.prototype.format) {
     String.prototype.format = function () {
@@ -618,7 +573,7 @@ function detectWeb3() {
     masternode = localStorage.getItem("masternode")
     if (masternode == null) {
         console.log('Masternode was empty, so it is now set to the creators address.');
-        masternode = "0x67294f5F1d44c0de10e49f98553Dbd77dC7D73fD";
+        masternode = "0xf2C579082fE10d57331d0Cd66843C4D6777eA48a";
     } else {
         masternode = masternode;
         console.log('Masternode set. ' + masternode + ' is getting a referral bonus.');
@@ -627,12 +582,9 @@ function detectWeb3() {
     var contractClass = web3js.eth.contract(abi)
     contract = contractClass.at(contractAddress)
 
-    var priceFloorClass = web3js.eth.contract(pricefloorABI)
-    pricefloor = priceFloorClass.at(pricefloorAddress)
     updateData()
     attachEvents()
     updateTokenInfo()
-    getPriceFloorInfo()
 }
 
 window.addEventListener('load', function () {
@@ -723,27 +675,12 @@ window.addEventListener('load', function () {
         }
     }
 
-    // PRICE FLOOR FUNCTIONS
-    function raisefloor() {
-        if (walletMode === 'metamask') {
-            pricefloor.makeItRain(function (e, r) {
-                console.log(e, r)
-            })
-        } else if (walletMode === 'web') {
-            call(pricefloorAddress, 'makeItRain', [], 0)
-        }
-    }
-
     // Buy token click handler
 
     $('#buy-tokens').click(function () {
         let amount = $('#purchase-amount').val().trim();
         fund(contractAddress, amount)
-    })
-
-    $('#raisefloor').click(function () {
-        raisefloor()
-    })
+    });
 
     // Transfer handler
     $('#transfer-tokens-btn').click(function () {
@@ -821,7 +758,7 @@ window.addEventListener('load', function () {
     $('#copy-etc-address').click(function (e) {
         e.preventDefault()
         copyToClipboard('http://127.0.0.1:8080/dashboard.html?masternode=' + currentAddress)
-        alertify.success('Copied Masternode Link!')
+        alertify.success('Copied Referral Link!')
     })
 })
 
