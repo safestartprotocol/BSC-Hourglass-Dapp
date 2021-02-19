@@ -1,440 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no' />
 
-        <meta name="description" content="B1VS - Function Island">
-        <meta name="author" content="Function Island">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no' />
 
-        <meta name="theme-color" content="#000000">
-        <meta name="msapplication-navbutton-color" content="#000000">
-        <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="description" content="B1VS - Function Island">
+    <meta name="author" content="Function Island">
 
-        <title>B1VS | Function Island</title>
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 
-        <!-- Alertify -->
-        <link rel="stylesheet" href="assets/css/alertify.min.css">
-        <link rel="stylesheet" href="assets/css/alertify-theme.min.css">
-        
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/custom-theme.css">
+    <title>B1VS | Function Island</title>
 
-        <!-- FontAwesome -->
-        <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
-    </head>
-    
-    <body class="is-preload text-white">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark darkNavbar fixed-top">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Alertify -->
+    <link rel="stylesheet" href="assets/css/alertify.min.css">
+    <link rel="stylesheet" href="assets/css/alertify-theme.min.css">
 
-                <div class="collapse navbar-collapse" id="navbarColor02">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="dashboard.html">
-                                <i class="fas fa-hand-holding-usd"></i> Dashboard (B1VS)
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bookmark text-white"></i> Review
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="https://www.dappstats.com/dapp/#" target="_blank"><i class="far fa-check-circle"></i> DappStats</a>
-                                <a class="dropdown-item" href="https://dapp.review/dapp/#" target="_blank"><i class="far fa-check-circle"></i> DappReview</a>
-                                <a class="dropdown-item" href="https://www.stateofthedapps.com/dapps/#" target="_blank"><i class="far fa-check-circle"></i> StateOfTheDapps</a>
-                            </div>
-                        </li>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom-theme.css">
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bullhorn text-white"></i> Social
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="https://discord.gg/" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-                                <a class="dropdown-item" href="https://t.me/FunctionIsland" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-                                <a class="dropdown-item" href="https://twitter.com/FunctionIsland" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-                            </div>
-                        </li>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
+</head>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-chevron-circle-down text-white"></i> Tools
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="https://bscscan.com/contract/" target="_blank"><i class="fas fa-edit"></i> Contract</a>
-                                <a class="dropdown-item" href="https://bscscan.com/" target="_blank"><i class="fas fa-search-dollar"></i> BSCScan</a>
-                                <a class="dropdown-item" href="https://github.com/FunctionIsland" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            </div>
-                        </li>
+<body class="is-preload text-white">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark darkNavbar fixed-top">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-ellipsis-h text-white"></i> More
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="howtoplay.html" target="_blank"><i class="fas fa-question"></i> How to Play</a>
-                                <a class="dropdown-item" href="about.html" target="_blank"><i class="fas fa-info-circle"></i> About</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        
-        <main style="margin-top: 120px;">
-            <div class="container">
-                <div class="jumbotron bg-dark text-white roundedCorners whiteBorder">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col text-center">
-                                <h1 class="text-white">
-                                    <img src="assets/img/logo.png" width="35px" height="35px" /> Function B1VS <img src="assets/img/logo.png" width="35px" height="35px" />
-                                </h1>
-                                <p><i>Function Island&apos;s Hourglass Game on BSC</i></p>
-                            </div>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="dashboard.html">
+                            <i class="fas fa-hand-holding-usd"></i> Dashboard (B1VS)
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bookmark text-white"></i> Review
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://www.dappstats.com/dapp/#" target="_blank"><i class="far fa-check-circle"></i> DappStats</a>
+                            <a class="dropdown-item" href="https://dapp.review/dapp/#" target="_blank"><i class="far fa-check-circle"></i> DappReview</a>
+                            <a class="dropdown-item" href="https://www.stateofthedapps.com/dapps/#" target="_blank"><i class="far fa-check-circle"></i> StateOfTheDapps</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bullhorn text-white"></i> Social
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://discord.gg/" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+                            <a class="dropdown-item" href="https://t.me/FunctionIsland" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+                            <a class="dropdown-item" href="https://twitter.com/FunctionIsland" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-chevron-circle-down text-white"></i> Tools
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://bscscan.com/contract/" target="_blank"><i class="fas fa-edit"></i> Contract</a>
+                            <a class="dropdown-item" href="https://bscscan.com/" target="_blank"><i class="fas fa-search-dollar"></i> BSCScan</a>
+                            <a class="dropdown-item" href="https://github.com/FunctionIsland" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="howtoplay.html">
+                            <i class="fas fa-question"></i> How to Play
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-top: 120px;">
+        <div class="container">
+            <div class="jumbotron bg-dark text-white roundedCorners whiteBorder">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h1 class="text-white">
+                                <img src="assets/img/logo.png" width="35px" height="35px" /> Function B1VS <img src="assets/img/logo.png" width="35px" height="35px" />
+                            </h1>
+                            <p><i>Function Island&apos;s Hourglass Game on BSC</i></p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card bg-dark text-white roundedCorners whiteBorder">
-                            <div class="card-header bg-dark text-white rcTop"><h4 class="text-white"><i class="fas fa-wallet text-white"></i> My Wallet</h4></div>
-                            <div class="card-body bg-dark text-white">
-                                <div class="container">
-                                    <div class="row text-center">
-                                        <div class="col">
-                                            <h3 class="text-white"><img src="assets/img/logo.png" width="30px" height="30px" /> <span class="balance"><img src="./assets/img/loader.svg" /></span> B1VS</h3>
-                                            <span class="value"><img src="./assets/img/loader.svg" /></span> BNB ($<span class="value-usd"><img src="./assets/img/loader.svg" /></span> USD)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="card-footer bg-dark text-white rcBottom">
-                                <div class="row">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white roundedCorners whiteBorder">
+                        <div class="card-header bg-dark text-white rcTop">
+                            <h4 class="text-white"><i class="fas fa-wallet text-white"></i> My Wallet</h4>
+                        </div>
+                        <div class="card-body bg-dark text-white">
+                            <div class="container">
+                                <div class="row text-center">
                                     <div class="col">
-                                        <button type="button" class="btn btn-block btn-sm btn-warning roundedCorners" data-toggle="modal" data-target="#transferTokensModal">Transfer</button>
+                                        <h3 class="text-white"><img src="assets/img/logo.png" width="30px" height="30px" /> <span class="balance"><img src="./assets/img/loader.svg" /></span> B1VS</h3>
+                                        <span class="value"><img src="./assets/img/loader.svg" /></span> BNB ($<span class="value-usd"><img src="./assets/img/loader.svg" /></span> USD)
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <br />
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="card bg-dark text-white roundedCorners whiteBorder">
-                            <div class="card-header bg-dark text-white rcTop"><h4 class="text-white"><i class="fas fa-hand-holding-usd"></i> My Dividends</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row text-center">
-                                        <div class="col">
-                                            <h3 class="text-white"><img src="assets/img/bnb.png" width="30px" height="30px" /> <span class="div"><img src="./assets/img/loader.svg" /></span></h3>
-                                            <small>$<span class="div-usd"><img src="./assets/img/loader.svg" /></span> USD Value</small>
-                                        </div>
-                                        
-                                        <div class="col text-center">
-                                            <h3 class="text-white"><img src="assets/img/bnb.png" width="30px" height="30px" /> <span id="refdiv"><img src="./assets/img/loader.svg" /></span></h3>
-                                            <small>From Referrals</small>
-                                        </div>
-                                    </div>
+
+                        <div class="card-footer bg-dark text-white rcBottom">
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="btn btn-block btn-sm btn-warning roundedCorners" data-toggle="modal" data-target="#transferTokensModal">Transfer</button>
                                 </div>
                             </div>
-                            
-                            <div class="card-footer bg-dark text-white rcBottom">
-                                <div class="row">
+                        </div>
+                    </div>
+                    <br />
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white roundedCorners whiteBorder">
+                        <div class="card-header bg-dark text-white rcTop">
+                            <h4 class="text-white"><i class="fas fa-hand-holding-usd"></i> My Dividends</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row text-center">
                                     <div class="col">
-                                        <button id="reinvest-btn" class="btn btn-block btn-dark btn-sm btn-outline-success roundedCorners text-white" type="button"><i class="fas fa-recycle"></i> Reinvest</button>
+                                        <h3 class="text-white"><img src="assets/img/bnb.png" width="30px" height="30px" /> <span class="div"><img src="./assets/img/loader.svg" /></span></h3>
+                                        <small>$<span class="div-usd"><img src="./assets/img/loader.svg" /></span> USD Value</small>
                                     </div>
-                                
-                                    <div class="col">
-                                        <button id="withdraw-btn" class="btn btn-block btn-dark btn-sm btn-outline-danger roundedCorners text-white" type="button"><i class="fas fa-hand-holding-usd"></i> Withdraw</button>
+
+                                    <div class="col text-center">
+                                        <h3 class="text-white"><img src="assets/img/bnb.png" width="30px" height="30px" /> <span id="refdiv"><img src="./assets/img/loader.svg" /></span></h3>
+                                        <small>From Referrals</small>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <br />
-                    </div>
-                </div>
 
-                <!-- Buy and Sell cards -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card bg-dark text-white roundedCorners whiteBorder">
-                            <div class="card-header bg-dark text-white rcTop"><h4 class="text-white"><i class="fas fa-dollar-sign text-success"></i> Buy B1VS</h4></div>
-                            <div class="card-body bg-dark text-white">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <img src="assets/img/bnb.png" width="30px" height="30px" />
-                                            <h4 class="text-white">Price: <span class="buy"><img src="./assets/img/loader.svg"></span> BNB</h4>
-                                            <p><span class="buy-usd"><img src="./assets/img/loader.svg"></span></p>
-                                            <label><b>BNB to Spend: </b></label>
-                                            <input id="purchase-amount" class="form-control roundedCorners" type="text" placeholder="BNB to Spend..."/>
-                                            <p id="deposit-hint"></p>
-                                        </div>
-                                    </div>
+                        <div class="card-footer bg-dark text-white rcBottom">
+                            <div class="row">
+                                <div class="col">
+                                    <button id="reinvest-btn" class="btn btn-block btn-dark btn-sm btn-outline-success roundedCorners text-white" type="button"><i class="fas fa-recycle"></i> Reinvest</button>
+                                </div>
+
+                                <div class="col">
+                                    <button id="withdraw-btn" class="btn btn-block btn-dark btn-sm btn-outline-danger roundedCorners text-white" type="button"><i class="fas fa-hand-holding-usd"></i> Withdraw</button>
                                 </div>
                             </div>
-                            
-                            <div class="card-footer bg-dark text-white rcBottom">
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+
+            <!-- Buy and Sell cards -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white roundedCorners whiteBorder">
+                        <div class="card-header bg-dark text-white rcTop">
+                            <h4 class="text-white"><i class="fas fa-dollar-sign text-success"></i> Buy B1VS</h4>
+                        </div>
+                        <div class="card-body bg-dark text-white">
+                            <div class="container">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button id="buy-tokens" class="btn btn-block btn-md btn-success roundedCorners" type="button"><i class="fas fa-plus"></i> Buy B1VS</button>
-                                        <small>Enter an amount of BNB to purchase B1VS with. A 10&#37; Dividend Fee is deducted from all deposits -  when you hold B1VS, you earn Dividends from other player&apos;s subsequent transactions (Buy/Sell/Transfer).</small>
+                                        <img src="assets/img/bnb.png" width="30px" height="30px" />
+                                        <h4 class="text-white">Price: <span class="buy"><img src="./assets/img/loader.svg"></span> BNB</h4>
+                                        <p><span class="buy-usd"><img src="./assets/img/loader.svg"></span></p>
+                                        <label><b>BNB to Spend: </b></label>
+                                        <input id="purchase-amount" class="form-control roundedCorners" type="text" placeholder="BNB to Spend..." />
+                                        <p id="deposit-hint"></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <br />
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="card bg-dark text-white roundedCorners whiteBorder">
-                            <div class="card-header bg-dark text-white rcTop"><h4 class="text-white"><i class="fas fa-dollar-sign text-danger"></i> Sell B1VS</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <img src="assets/img/bnb.png" width="30px" height="30px" />
-                                            <h4 class="text-white"><span class="sell"><img src="./assets/img/loader.svg"></span> BNB</h4>
-                                            <p><span class="sell-usd"><img src="./assets/img/loader.svg"></span></p>
-                                            <label><b>B1VS to Sell: </b></label>
-                                            <input id="sell-tokens-amount" class="form-control roundedCorners" type="text" placeholder="B1VS to Sell..."/>
-                                            <p id="withdraw-hint"></p>
-                                        </div>
-                                    </div>
+
+                        <div class="card-footer bg-dark text-white rcBottom">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button id="buy-tokens" class="btn btn-block btn-md btn-success roundedCorners" type="button"><i class="fas fa-plus"></i> Buy B1VS</button>
+                                    <small>Enter an amount of BNB to purchase B1VS with. A 10&#37; Dividend Fee is deducted from all deposits - when you hold B1VS, you earn Dividends from other player&apos;s subsequent transactions (Buy/Sell/Transfer).</small>
                                 </div>
                             </div>
-                            
-                            <div class="card-footer bg-dark text-white rcBottom">
+                        </div>
+                    </div>
+                    <br />
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white roundedCorners whiteBorder">
+                        <div class="card-header bg-dark text-white rcTop">
+                            <h4 class="text-white"><i class="fas fa-dollar-sign text-danger"></i> Sell B1VS</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="container">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button id="sell-tokens-btn" class="btn btn-block btn-md btn-danger text-white roundedCorners" type="button"><i class="fas fa-minus"></i> Sell B1VS</button>
-                                        <small>Enter an amount of B1VS to sell for BNB. A 10&#37; Dividend Fee is applied to the the total value of your sell. When you sell B1VS, your BNB is added to Dividends, so you will need to withdraw them to your wallet.</small>
+                                        <img src="assets/img/bnb.png" width="30px" height="30px" />
+                                        <h4 class="text-white"><span class="sell"><img src="./assets/img/loader.svg"></span> BNB</h4>
+                                        <p><span class="sell-usd"><img src="./assets/img/loader.svg"></span></p>
+                                        <label><b>B1VS to Sell: </b></label>
+                                        <input id="sell-tokens-amount" class="form-control roundedCorners" type="text" placeholder="B1VS to Sell..." />
+                                        <p id="withdraw-hint"></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <br />
+
+                        <div class="card-footer bg-dark text-white rcBottom">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button id="sell-tokens-btn" class="btn btn-block btn-md btn-danger text-white roundedCorners" type="button"><i class="fas fa-minus"></i> Sell B1VS</button>
+                                    <small>Enter an amount of B1VS to sell for BNB. A 10&#37; Dividend Fee is applied to the the total value of your sell. When you sell B1VS, your BNB is added to Dividends, so you will need to withdraw them to your wallet.</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <br />
                 </div>
-                
-                <!-- Pricefloor and Referrals cards -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card bg-dark text-white roundedCorners whiteBorder">
-                            <div class="card-header bg-dark text-white rcTop"><h4 class="text-white"><i class="fas fa-dollar-sign text-muted"></i> Price Floor <small>(<a href="#" data-toggle="modal" data-target="#pricefloorHelpModal"><i class="fas fa-question"></i></a>)</small></h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <h4 class="text-white"><span id="pricefloorTokens"><img src="./assets/img/loader.svg" /></span> B1VS</h4>
-                                            <small>Locked to Price Floor</small>
-                                        </div>
-                                        
-                                        <div class="col text-center">
-                                            <h4 class="text-white"><span id="pricefloorDivs"><img src="./assets/img/loader.svg" /></span> BNB</h4>
-                                            <small>Ready to Lock</small>
-                                        </div>
+            </div>
+
+            <!-- Pricefloor and Referrals cards -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white roundedCorners whiteBorder">
+                        <div class="card-header bg-dark text-white rcTop">
+                            <h4 class="text-white"><i class="fas fa-dollar-sign text-muted"></i> Price Floor <small>(<a href="#" data-toggle="modal" data-target="#pricefloorHelpModal"><i class="fas fa-question"></i></a>)</small></h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h4 class="text-white"><span id="pricefloorTokens"><img src="./assets/img/loader.svg" /></span> B1VS</h4>
+                                        <small>Locked to Price Floor</small>
+                                    </div>
+
+                                    <div class="col text-center">
+                                        <h4 class="text-white"><span id="pricefloorDivs"><img src="./assets/img/loader.svg" /></span> BNB</h4>
+                                        <small>Ready to Lock</small>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="card-footer bg-dark text-white rcBottom">
-                                <div class="container">
-                                    <div class="row">
+                        </div>
+
+                        <div class="card-footer bg-dark text-white rcBottom">
+                            <div class="container">
+                                <div class="row">
                                     <div class="col">
                                         <button id="raisefloor" class="btn btn-block btn-success btn-sm roundedCorners text-white" type="button"><i class="fas fa-arrow-up"></i> Raise Floor</button>
                                     </div>
                                 </div>
-                                </div>
                             </div>
                         </div>
-                        <br />
                     </div>
-                    
-                    <div class="col-md-6">
-                        <div class="card bg-dark text-white roundedCorners whiteBorder">
-                            <div class="card-header bg-dark text-white rcTop"><h4 class="text-white"><i class="fas fa-users text-muted"></i> Referrals</h4></div>
-                            <div class="card-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <h4 class="text-white"><img src="assets/img/bnb.png" width="30px" height="30px" /> <span id="totalRefEarnings"><img src="./assets/img/loader.svg" /></span></h4>
-                                            <small>Referral Earnings</small>
-                                        </div>
-
-                                        <div class="col text-center">
-                                            <h4 class="text-white"><span id="refUseCount"><img src="./assets/img/loader.svg" /></span></h4>
-                                            <small>Total Referrals</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="card-footer bg-dark text-white rcBottom">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <a id="copy-etc-address" data-clipboard-text="" class="btn btn-block btn-sm btn-secondary roundedCorners" href="#"><strong>Tap to copy Referral Link</strong></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                    </div>
+                    <br />
                 </div>
-                
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="card bg-dark text-white roundedCorners whiteBorder">
-                            <div class="card-header bg-dark text-white rcTop"><i class="fas fa-chart-bar"></i> B1VS Stats</div>
-                            <div class="card-body bg-dark text-white">
+
+                <div class="col-md-6">
+                    <div class="card bg-dark text-white roundedCorners whiteBorder">
+                        <div class="card-header bg-dark text-white rcTop">
+                            <h4 class="text-white"><i class="fas fa-users text-muted"></i> Referrals</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="container">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <img src="assets/img/logo.png" width="40px" height="40px" /><br />
-                                        <br />
-                                        <b><span class="contract-tokens"><img src="./assets/img/loader.svg"></span> B1VS</b><br />
-                                        <small>Current Supply</small>
+                                        <h4 class="text-white"><img src="assets/img/bnb.png" width="30px" height="30px" /> <span id="totalRefEarnings"><img src="./assets/img/loader.svg" /></span></h4>
+                                        <small>Referral Earnings</small>
                                     </div>
-                                
+
                                     <div class="col text-center">
-                                        <img src="assets/img/bnb.png" width="40px" height="40px" /><br />
-                                        <br />
-                                        <b><span class="contract-balance"><img src="./assets/img/loader.svg"></span> BNB</b><br />
-                                        <small>Contract Balance</small>
-                                    </div>
-                                
-                                    <div class="col text-center">
-                                        <img src="assets/img/dollar.png" width="40px" height="40px" /><br />
-                                        <br />
-                                        <b><span class="contract-balance-usd"><img src="./assets/img/loader.svg"></span></b><br />
-                                        <small>Market Cap</small>
+                                        <h4 class="text-white"><span id="refUseCount"><img src="./assets/img/loader.svg" /></span></h4>
+                                        <small>Total Referrals</small>
                                     </div>
                                 </div>
                             </div>
-                        
-                            <div class="card-footer bg-dark text-white rcBottom">
-                                
+                        </div>
+
+                        <div class="card-footer bg-dark text-white rcBottom">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <a id="copy-etc-address" data-clipboard-text="" class="btn btn-block btn-sm btn-secondary roundedCorners" href="#"><strong>Tap to copy Referral Link</strong></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <br />
+                    </div>
+                    <br />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <div class="card bg-dark text-white roundedCorners whiteBorder">
+                        <div class="card-header bg-dark text-white rcTop"><i class="fas fa-chart-bar"></i> B1VS Stats</div>
+                        <div class="card-body bg-dark text-white">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img src="assets/img/logo.png" width="40px" height="40px" /><br />
+                                    <br />
+                                    <b><span class="contract-tokens"><img src="./assets/img/loader.svg"></span> B1VS</b><br />
+                                    <small>Current Supply</small>
+                                </div>
+
+                                <div class="col text-center">
+                                    <img src="assets/img/bnb.png" width="40px" height="40px" /><br />
+                                    <br />
+                                    <b><span class="contract-balance"><img src="./assets/img/loader.svg"></span> BNB</b><br />
+                                    <small>Contract Balance</small>
+                                </div>
+
+                                <div class="col text-center">
+                                    <img src="assets/img/dollar.png" width="40px" height="40px" /><br />
+                                    <br />
+                                    <b><span class="contract-balance-usd"><img src="./assets/img/loader.svg"></span></b><br />
+                                    <small>Market Cap</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-dark text-white rcBottom">
+
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </main>
+    <br />
+
+    <footer>
+        <div class="container">
+            <div class="row jumbotron glassPanel roundedCorners text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <b>Function Island B1VS</b><br>
+                            <p>
+                                This project is considered beta and experimental. Do not invest what you cannot afford to lose. You are the only party responsible for your transactions.
+                            </p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <b class="text-muted">SOCIAL</b><br>
+                            <a class="text-white" href="https://discord.gg/68NyMnB" target="_blank">Discord</a><br />
+                            <a class="text-white" href="https://twitter.com/FunctionIsland" target="_blank">Twitter</a><br />
+                            <a class="text-white" href="https://t.me/FunctionIsland" target="_blank">Telegram</a><br />
+                        </div>
+
+                        <div class="col-md-3">
+                            <b class="text-muted">RESOURCES</b><br>
+                            <a class="text-white" href="https://github.com/FunctionIsland">GitHub</a><br />
+                            <a class="text-white" href="https://tronscan.org/#/contract/TMCMPzmosnQ8UAYW1zcBwjLTxDq8ce4Y5e/code" target="_blank">D1VS <small>(TRON)</small></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
-        
-        <!-- Modals -->
-        
-        <div class="modal" id="transferTokensModal">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark text-white roundedCorners">
+        </div>
+    </footer>
 
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Transfer B1VS</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
+    <!-- Modals -->
 
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4 text-left">
-                                    <label><b>Transfer Amount</b></label>
-                                    <input id="transfer-tokens" class="form-control roundedCorners" type="text" placeholder="B1VS to Send..."/><br />
-                                </div>
-                                
-                                <div class="col-md-8 text-left">
-                                    <label><b>Transfer Recipient</b></label>
-                                    <input id="transfer-address" class="form-control roundedCorners" type="text" placeholder="Recipient Address"/>
-                                </div>
+    <div class="modal" id="transferTokensModal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white roundedCorners">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Transfer B1VS</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 text-left">
+                                <label><b>Transfer Amount</b></label>
+                                <input id="transfer-tokens" class="form-control roundedCorners" type="text" placeholder="B1VS to Send..." /><br />
                             </div>
-                            
-                            <div class="row">
-                                <div class="col text-center">
-                                    <button id="transfer-tokens-btn" class="btn btn-block btn-warning text-black roundedCorners" type="button"><i class="fas fa-arrow-right"></i> Transfer Tokens</button>
-                                </div>
+
+                            <div class="col-md-8 text-left">
+                                <label><b>Transfer Recipient</b></label>
+                                <input id="transfer-address" class="form-control roundedCorners" type="text" placeholder="Recipient Address" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-center">
+                                <button id="transfer-tokens-btn" class="btn btn-block btn-warning text-black roundedCorners" type="button"><i class="fas fa-arrow-right"></i> Transfer Tokens</button>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <button type="button" class="btn btn-block btn-md btn-dark roundedCorners" data-dismiss="modal">Close</button>
-                                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-center">
+                                <button type="button" class="btn btn-block btn-md btn-dark roundedCorners" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="modal" id="pricefloorHelpModal">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark roundedCorners">
+    </div>
 
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title text-white">Price Floor</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
+    <div class="modal" id="pricefloorHelpModal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark roundedCorners">
 
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col text-left text-white">
-                                    <p>
-                                        The Pricefloor is a special contract designed to hold B1VS, and earn Dividends. When the Pricefloor is raised, the Minimum value of the last B1VS share rises - this will grow larger over time, until the ATH-Triggered sell is called upon - which results in 20% of the Pricefloor balance being distributed between all B1VS holders<br />
-                                        <br />
-                                        Anyone can Raise the floor - the only bonus however is guaranteeing a minimum sell value for the last B1VS token, which helps to ensure game longevity.
-                                    </p>
-                                </div>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text-white">Price Floor</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-left text-white">
+                                <p>
+                                    The Pricefloor is a special contract designed to hold B1VS, and earn Dividends. When the Pricefloor is raised, the Minimum value of the last B1VS share rises - this will grow larger over time, until the ATH-Triggered sell is called upon - which results in 20% of the Pricefloor balance being distributed between all B1VS holders<br />
+                                    <br />
+                                    Anyone can Raise the floor - the only bonus however is guaranteeing a minimum sell value for the last B1VS token, which helps to ensure game longevity.
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    </div>
-
                 </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
             </div>
         </div>
-    </body>
-    
-    <!-- Scripts -->
-    <!-- Bootstrap 4 and dependencies -->
-    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/js/popper.min.js" type="text/javascript"></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-    
-    <!-- Site-Specific dependencies -->
-    <script src="assets/js/alertify.min.js"></script>
-    <script src="assets/js/bignumber.min.js"></script>
-    <script src="assets/js/clipboard.min.js"></script>
+    </div>
+</body>
 
-    <script src="assets/js/tether.min.js"></script>
+<!-- Scripts -->
+<!-- Bootstrap 4 and dependencies -->
+<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/popper.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
 
-    <script src="assets/js/web3.min.js"></script>
-    
-    <!-- Contract Scripts -->
-    <script type="text/javascript" src="assets/lib/dapp.js"></script>
-    <script type="text/javascript" src="assets/lib/referrals.js"></script>
+<!-- Site-Specific dependencies -->
+<script src="assets/js/alertify.min.js"></script>
+<script src="assets/js/bignumber.min.js"></script>
+<script src="assets/js/clipboard.min.js"></script>
+
+<script src="assets/js/tether.min.js"></script>
+
+<script src="assets/js/web3.min.js"></script>
+
+<!-- Contract Scripts -->
+<script type="text/javascript" src="assets/lib/dapp.js"></script>
+<script type="text/javascript" src="assets/lib/referrals.js"></script>
+
 </html>
