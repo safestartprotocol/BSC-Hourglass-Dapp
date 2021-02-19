@@ -41,7 +41,7 @@
                             <i class="fas fa-hand-holding-usd"></i> Dashboard (B1VS)
                         </a>
                     </li>
-                    
+
                     <li class="nav-item">
                         <a class="nav-link text-white" href="gauntlet.html">
                             <i class="fas fa-lock"></i> Gauntlets
@@ -52,21 +52,10 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-bookmark text-white"></i> Review
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://www.dappstats.com/dapp/#" target="_blank"><i class="far fa-check-circle"></i> DappStats</a>
-                            <a class="dropdown-item" href="https://dapp.review/dapp/#" target="_blank"><i class="far fa-check-circle"></i> DappReview</a>
-                            <a class="dropdown-item" href="https://www.stateofthedapps.com/dapps/#" target="_blank"><i class="far fa-check-circle"></i> StateOfTheDapps</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bullhorn text-white"></i> Social
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://discord.gg/" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+                            <a class="dropdown-item" href="https://discord.gg/FmCEbPU" target="_blank"><i class="fab fa-discord"></i> Discord</a>
                             <a class="dropdown-item" href="https://t.me/FunctionIsland" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
                             <a class="dropdown-item" href="https://twitter.com/FunctionIsland" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
                         </div>
@@ -77,7 +66,7 @@
                             <i class="fas fa-chevron-circle-down text-white"></i> Tools
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://bscscan.com/contract/" target="_blank"><i class="fas fa-edit"></i> Contract</a>
+                            <a class="dropdown-item" href="https://bscscan.com/address/0x0c22C33eaEFC961Ed529a6Af4654B6c2f51c12D3#code" target="_blank"><i class="fas fa-edit"></i> Contract</a>
                             <a class="dropdown-item" href="https://bscscan.com/" target="_blank"><i class="fas fa-search-dollar"></i> BSCScan</a>
                             <a class="dropdown-item" href="https://github.com/FunctionIsland" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
@@ -121,8 +110,6 @@
 
             <div class="row">
                 <div class="col text-center">
-                    <h3>My Gauntlet</h3>
-                    <br />
                     <span id="mystronghand"></span>
                 </div>
             </div>
@@ -135,7 +122,7 @@
                             <span id="setupPanel"></span>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col text-center">
                             <span id="myDepositPanel"></span>
@@ -151,7 +138,7 @@
                             <span id="myControlsPanel"></span>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col text-center">
                             <span id="mySellPanel"></span>
@@ -160,24 +147,6 @@
                     <hr />
                 </div>
             </div>
-            <br />
-
-            <div class="row">
-                <div class="col text-center">
-                    <h3>All Gauntlets</h3>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr class="table-primary">
-                                <th>Owner</th>
-                                <th>Balance</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody id="stronghands"></tbody>
-                    </table>
-                </div>
-            </div>
-            <hr />
         </div>
     </main>
     <br />
@@ -196,7 +165,7 @@
 
                         <div class="col-md-3">
                             <b class="text-muted">SOCIAL</b><br>
-                            <a class="text-white" href="https://discord.gg/68NyMnB" target="_blank">Discord</a><br />
+                            <a class="text-white" href="https://discord.gg/FmCEbPU" target="_blank">Discord</a><br />
                             <a class="text-white" href="https://twitter.com/FunctionIsland" target="_blank">Twitter</a><br />
                             <a class="text-white" href="https://t.me/FunctionIsland" target="_blank">Telegram</a><br />
                         </div>
@@ -204,7 +173,8 @@
                         <div class="col-md-3">
                             <b class="text-muted">RESOURCES</b><br>
                             <a class="text-white" href="https://github.com/FunctionIsland">GitHub</a><br />
-                            <a class="text-white" href="https://tronscan.org/#/contract/TMCMPzmosnQ8UAYW1zcBwjLTxDq8ce4Y5e/code" target="_blank">D1VS <small>(TRON)</small></a>
+                            <a class="text-white" href="https://tronscan.org/#/contract/TMCMPzmosnQ8UAYW1zcBwjLTxDq8ce4Y5e/code" target="_blank">D1VS <small>(TRON)</small></a><br />
+                            <a class="text-white" href="https://bscscan.com/address/0x0c22C33eaEFC961Ed529a6Af4654B6c2f51c12D3#code" target="_blank">B1VS <small>(BSC)</small></a>
                         </div>
                     </div>
                 </div>
@@ -224,7 +194,6 @@
     <script src="assets/js/clipboard.min.js"></script>
 
     <script src="assets/js/tether.min.js"></script>
-
     <script src="assets/js/web3.min.js"></script>
 
     <!-- Contract Scripts -->
