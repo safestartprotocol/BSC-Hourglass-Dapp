@@ -16,7 +16,12 @@
 
 ### 🏠 [Homepage](https://functionisland.net)
 
+![B1VS Dapp - Homepage](https://github.com/FunctionIsland/BSC-Hourglass-Dapp/blob/main/screenshots/image_1.png)
+
 ### ✨ [Demo](https://functionisland.net/dashboard.html)
+
+![B1VS Dapp - Dashboard](https://github.com/FunctionIsland/BSC-Hourglass-Dapp/blob/main/screenshots/image_2.png)
+
 
 ## Author
 
