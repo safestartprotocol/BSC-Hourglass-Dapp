@@ -256,7 +256,7 @@ window.addEventListener('load', function () {
                             alertify.error('Uh-Oh! Something went wrong... Try again later');
                             console.log('An error occured', err);
                         }
-                    })
+                    });
                 }
             });
         } else {
@@ -274,9 +274,9 @@ window.addEventListener('load', function () {
     $('#currency').val(currency);
     
     $('#currency').change(function () {
-        currency = $(this).val()
-        updateEthPrice()
-    })
+        currency = $(this).val();
+        updateEthPrice();
+    });
 
     updateEthPrice();
 
@@ -284,17 +284,17 @@ window.addEventListener('load', function () {
         var number = $('#purchase-amount').val();
         var numTokens = number / globalBuyPrice;
         $('.number-of-tokens').text("With " + (number == 0 ? 0 : number) + " BNB you can buy " + numTokens.toFixed(3) + " B1VS");
-    })
+    });
 
     $('#copy-etc-address').click(function (e) {
-        e.preventDefault()
-        copyToClipboard('http://127.0.0.1:8080/dashboard.html?masternode=' + currentAddress)
-        alertify.success('Copied Referral Link!')
-    })
+        e.preventDefault();
+        copyToClipboard('http://127.0.0.1:8080/dashboard.html?masternode=' + currentAddress);
+        alertify.success('Copied Referral Link!');
+    });
 })
 
 function updateData() {
-    clearTimeout(dataTimer)
+    clearTimeout(dataTimer);
 
     var loggedIn = false
 
@@ -314,35 +314,35 @@ function updateData() {
                 $('.value').text(bal.toFixed(4))
                 $('.value-usd').text(Number((convertWeiToEth(r * 1) * usdPrice).toFixed(2)).toLocaleString())
                 tokenAmount = bal
-            })
-        })
+            });
+        });
 
         contract.myDividends(false, function (e, r) {
             let div = convertWeiToEth(r).toFixed(6)
             let refdiv = (dividendValue - div).toFixed(6);
 
-            $('#refdiv').text(refdiv)
-            $('#refdiv-usd').text(Number((refdiv * usdPrice).toFixed(2)).toLocaleString())
+            $('#refdiv').text(refdiv);
+            $('#refdiv-usd').text(Number((refdiv * usdPrice).toFixed(2)).toLocaleString());
 
-            $('#nonrefdiv').text(div)
-            $('#nonrefdiv-usd').text(Number((convertWeiToEth(r) * usdPrice).toFixed(2)).toLocaleString())
-        })
+            $('#nonrefdiv').text(div);
+            $('#nonrefdiv-usd').text(Number((convertWeiToEth(r) * usdPrice).toFixed(2)).toLocaleString());
+        });
 
 
         contract.myDividends(true, function (e, r) {
             let div = convertWeiToEth(r).toFixed(6)
 
-            $('.div').text(div)
-            $('input.div').val(div + " BNB")
-            $('.div-usd').text(Number((convertWeiToEth(r) * usdPrice).toFixed(2)).toLocaleString())
+            $('.div').text(div);
+            $('input.div').val(div + " BNB");
+            $('.div-usd').text(Number((convertWeiToEth(r) * usdPrice).toFixed(2)).toLocaleString());
 
             if (dividendValue != div) {
                 $('.div').fadeTo(100, 0.3, function () {
-                    $(this).fadeTo(250, 1.0)
-                })
-                dividendValue = div
+                    $(this).fadeTo(250, 1.0);
+                });
+                dividendValue = div;
             }
-        })
+        });
 
         contract.totalReferralsOf(currentAddress, function (e, r) {$('#refUseCount').text(r)});
         contract.totalReferralEarningsOf(currentAddress, function (e, r) {$('#totalRefEarnings').text((r / 1e18).toFixed(3))});
@@ -352,10 +352,10 @@ function updateData() {
     }
 
     contract.buyPrice(function (e, r) {
-        let buyPrice = convertWeiToEth(r)
-        globalBuyPrice = convertWeiToEth(r)
-        $('.buy').text(buyPrice.toFixed(6) + ' ')
-        $('.buy-usd').text('$' + Number((buyPrice * usdPrice).toFixed(2)).toLocaleString() + ' ' + currency + '')
+        let buyPrice = convertWeiToEth(r);
+        globalBuyPrice = convertWeiToEth(r);
+        $('.buy').text(buyPrice.toFixed(6) + ' ');
+        $('.buy-usd').text('$' + Number((buyPrice * usdPrice).toFixed(2)).toLocaleString() + ' ' + currency + '');
     })
 
     contract.totalSupply(function (e, r) {
@@ -370,57 +370,15 @@ function updateData() {
     })
 
     contract.sellPrice(function (e, r) {
-        let sellPrice = convertWeiToEth(r)
-        $('.sell').text(sellPrice.toFixed(6) + ' ')
-        $('.sell-usd').text('$' + Number((sellPrice * usdPrice).toFixed(2)).toLocaleString() + ' ' + currency + '')
+        let sellPrice = convertWeiToEth(r);
+        $('.sell').text(sellPrice.toFixed(6) + ' ');
+        $('.sell-usd').text('$' + Number((sellPrice * usdPrice).toFixed(2)).toLocaleString() + ' ' + currency + '');
     })
 
     web3js.eth.getBalance(contract.address, function (e, r) {
-        $('.contract-balance').text(convertWeiToEth(r).toFixed(4) + " ")
+        $('.contract-balance').text(convertWeiToEth(r).toFixed(4) + " ");
         $('.contract-balance-usd').text('$' + Number((convertWeiToEth(r) * usdPrice).toFixed(2)).toLocaleString() + ' ' + currency + '');
     })
-
-    $('#purchase-amount').on('input change', function () {
-        var incomingBNB = parseFloat($(this).val() * 0.9);
-        var tokenPriceInitial_ = 0.0000001;
-        var tokenPriceIncremental_ = 0.00000001;
-        
-        // If there's no text, or value is zero, don't show anything in the hint.
-        if (incomingBNB === 0 || Number.isNaN(incomingBNB)) {
-            $('#deposit-hint').text("");
-            return;
-        }
-
-        if (incomingBNB > 0) {
-            contract.buyPrice(function (e, r) {
-                let sellPrice = convertWeiToEth(r);
-                var tokens = incomingBNB / sellPrice;
-                $('#deposit-hint').text("You will receive about " + tokens.toFixed(0) + " B1VS");
-            })
-        }
-    });
-
-    $('#sell-tokens-amount').on('input change', function () {
-        var incomingB1VS = parseFloat($(this).val() * 0.9);
-        var tokenPriceInitial_ = 0.0000001;
-        var tokenPriceIncremental_ = 0.00000001;
-
-        // If there's no text, or value is zero, don't show anything in the hint.
-        if (incomingB1VS === 0 || Number.isNaN(incomingB1VS)) {
-            $('#withdraw-hint').text("");
-            return;
-        }
-
-        if (incomingB1VS > 0) {
-            contract.sellPrice(function (e, r) {
-                let buyPrice = convertWeiToEth(r)
-                var tokens = incomingB1VS * buyPrice;
-                $('#withdraw-hint').text("You will receive about " + tokens.toFixed(0) + " BNB");
-            })
-        }
-
-    });
-
 
     dataTimer = setTimeout(function () {
         updateData()
