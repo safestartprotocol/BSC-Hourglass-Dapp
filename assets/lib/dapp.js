@@ -300,25 +300,25 @@ function updateData() {
 
     if (walletMode === 'metamask') {
         loggedIn = typeof web3js.eth.defaultAccount !== 'undefined' && web3js.eth.defaultAccount !== null
-        currentAddress = web3js.eth.defaultAccount
+        currentAddress = web3js.eth.defaultAccount;
     } else if (walletMode === 'web') {
-        loggedIn = currentAddress !== null
+        loggedIn = currentAddress !== null;
     }
 
     if (loggedIn) {
         contract.balanceOf(currentAddress, function (e, r) {
-            const tokenAmount = (r / 1e18)
-            $('.balance').text(Number(tokenAmount.toFixed(2)).toLocaleString())
+            const tokenAmount = (r / 1e18);
+            $('.balance').text(Number(tokenAmount.toFixed(3)));
             contract.calculateBNBReceived(r, function (e, r) {
-                let bal = convertWeiToEth(r)
-                $('.value').text(bal.toFixed(4))
-                $('.value-usd').text(Number((convertWeiToEth(r * 1) * usdPrice).toFixed(2)).toLocaleString())
-                tokenAmount = bal
+                let bal = convertWeiToEth(r);
+                $('.value').text(bal.toFixed(4));
+                $('.value-usd').text(Number((convertWeiToEth(r * 1) * usdPrice).toFixed(2)).toLocaleString());
+                tokenAmount = bal;
             });
         });
 
         contract.myDividends(false, function (e, r) {
-            let div = convertWeiToEth(r).toFixed(6)
+            let div = convertWeiToEth(r).toFixed(6);
             let refdiv = (dividendValue - div).toFixed(6);
 
             $('#refdiv').text(refdiv);

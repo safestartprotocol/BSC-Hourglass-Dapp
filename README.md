@@ -12,7 +12,7 @@
     </a>
 </p>
 
-> An implementation of the Hourglass (&#34;Proof of Weak Hands&#34;) smart contract, with an accompanying Dapp, suitable for Binance Smart Chain. 
+> An implementation of the Hourglass (&#34;Proof of Weak Hands&#34;) smart contract, with an accompanying Dapp, suitable for Binance Smart Chain. Also compatible or portable to ETH and similar chains.
 
 B1VS Hourglass is a customised implementation of the "Proof of Weak Hands" game-theory, popularly known also as the Hourglass contract, or "PoWH".
 
