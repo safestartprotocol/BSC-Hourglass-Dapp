@@ -21,458 +21,7 @@ var ethPriceTimer = null;
 var dataTimer = null;
 var infoTimer = null;
 
-var abi = [{
-    "inputs": [],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
-}, {
-    "anonymous": false,
-    "inputs": [{
-        "indexed": true,
-        "internalType": "address",
-        "name": "from",
-        "type": "address"
-    }, {
-        "indexed": true,
-        "internalType": "address",
-        "name": "to",
-        "type": "address"
-    }, {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "tokens",
-        "type": "uint256"
-    }],
-    "name": "Transfer",
-    "type": "event"
-}, {
-    "anonymous": false,
-    "inputs": [{
-        "indexed": true,
-        "internalType": "address",
-        "name": "customerAddress",
-        "type": "address"
-    }, {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "bnbReinvested",
-        "type": "uint256"
-    }, {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "tokensMinted",
-        "type": "uint256"
-    }],
-    "name": "onReinvestment",
-    "type": "event"
-}, {
-    "anonymous": false,
-    "inputs": [{
-        "indexed": true,
-        "internalType": "address",
-        "name": "customerAddress",
-        "type": "address"
-    }, {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "incomingBNB",
-        "type": "uint256"
-    }, {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "tokensMinted",
-        "type": "uint256"
-    }, {
-        "indexed": true,
-        "internalType": "address",
-        "name": "referredBy",
-        "type": "address"
-    }],
-    "name": "onTokenPurchase",
-    "type": "event"
-}, {
-    "anonymous": false,
-    "inputs": [{
-        "indexed": true,
-        "internalType": "address",
-        "name": "customerAddress",
-        "type": "address"
-    }, {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "tokensBurned",
-        "type": "uint256"
-    }, {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "bnbEarned",
-        "type": "uint256"
-    }],
-    "name": "onTokenSell",
-    "type": "event"
-}, {
-    "anonymous": false,
-    "inputs": [{
-        "indexed": true,
-        "internalType": "address",
-        "name": "customerAddress",
-        "type": "address"
-    }, {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "bnbWithdrawn",
-        "type": "uint256"
-    }],
-    "name": "onWithdraw",
-    "type": "event"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_customerAddress",
-        "type": "address"
-    }],
-    "name": "balanceOf",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_referredBy",
-        "type": "address"
-    }],
-    "name": "buy",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "payable",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "buyPrice",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "uint256",
-        "name": "_tokensToSell",
-        "type": "uint256"
-    }],
-    "name": "calculateBNBReceived",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "uint256",
-        "name": "_bnbToSpend",
-        "type": "uint256"
-    }],
-    "name": "calculateTokensReceived",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "decimals",
-    "outputs": [{
-        "internalType": "uint8",
-        "name": "",
-        "type": "uint8"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "deployer",
-    "outputs": [{
-        "internalType": "address payable",
-        "name": "",
-        "type": "address"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_customerAddress",
-        "type": "address"
-    }, {
-        "internalType": "bool",
-        "name": "_includeReferralBonus",
-        "type": "bool"
-    }],
-    "name": "dividendsOf",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "exit",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "bool",
-        "name": "_includeReferralBonus",
-        "type": "bool"
-    }],
-    "name": "myDividends",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "myStatus",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "myTokens",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "myTotalDeposits",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "myTotalReferralEarnings",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "myTotalReferrals",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "myTotalWithdrawals",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "name",
-    "outputs": [{
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "reinvest",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "uint256",
-        "name": "_amountOfTokens",
-        "type": "uint256"
-    }],
-    "name": "sell",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "sellPrice",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-    }],
-    "name": "statusOf",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "symbol",
-    "outputs": [{
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "totalBNBBalance",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-    }],
-    "name": "totalDepositsOf",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-    }],
-    "name": "totalReferralEarningsOf",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-    }],
-    "name": "totalReferralsOf",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "totalSupply",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-    }],
-    "name": "totalWithdrawalsOf",
-    "outputs": [{
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-    }],
-    "stateMutability": "view",
-    "type": "function"
-}, {
-    "inputs": [{
-        "internalType": "address",
-        "name": "_toAddress",
-        "type": "address"
-    }, {
-        "internalType": "uint256",
-        "name": "_amountOfTokens",
-        "type": "uint256"
-    }],
-    "name": "transfer",
-    "outputs": [{
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-    }],
-    "stateMutability": "nonpayable",
-    "type": "function"
-}, {
-    "inputs": [],
-    "name": "withdraw",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-}, {
-    "stateMutability": "payable",
-    "type": "receive"
-}];
+var abi = [{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"tokens","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"customerAddress","type":"address"},{"indexed":false,"internalType":"uint256","name":"bnbReinvested","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"tokensMinted","type":"uint256"}],"name":"onReinvestment","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"customerAddress","type":"address"},{"indexed":false,"internalType":"uint256","name":"incomingBNB","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"tokensMinted","type":"uint256"},{"indexed":true,"internalType":"address","name":"referredBy","type":"address"}],"name":"onTokenPurchase","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"customerAddress","type":"address"},{"indexed":false,"internalType":"uint256","name":"tokensBurned","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"bnbEarned","type":"uint256"}],"name":"onTokenSell","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"customerAddress","type":"address"},{"indexed":false,"internalType":"uint256","name":"bnbWithdrawn","type":"uint256"}],"name":"onWithdraw","type":"event"},{"inputs":[{"internalType":"address","name":"_customerAddress","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_referredBy","type":"address"}],"name":"buy","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"buyPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_tokensToSell","type":"uint256"}],"name":"calculateBNBReceived","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_bnbToSpend","type":"uint256"}],"name":"calculateTokensReceived","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"deployer","outputs":[{"internalType":"address payable","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_customerAddress","type":"address"},{"internalType":"bool","name":"_includeReferralBonus","type":"bool"}],"name":"dividendsOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"exit","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"_includeReferralBonus","type":"bool"}],"name":"myDividends","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"myStatus","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"myTokens","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"myTotalDeposits","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"myTotalReferralEarnings","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"myTotalReferrals","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"myTotalWithdrawals","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"reinvest","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_amountOfTokens","type":"uint256"}],"name":"sell","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"sellPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"statusOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalBNBBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"totalDepositsOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"totalReferralEarningsOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"totalReferralsOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"totalWithdrawalsOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_toAddress","type":"address"},{"internalType":"uint256","name":"_amountOfTokens","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"}];
 
 // UTILITY FUNCTIONS
 if (!String.prototype.format) {
@@ -716,38 +265,20 @@ window.addEventListener('load', function () {
 
     }
 
-    $('#sell-tokens-btn').click(function () {
-        sell($("#sell-tokens-amount").val())
-    }) // Sell token click handler
-    $('#reinvest-btn').click(function () {
-        reinvest()
-    }) // Reinvest click handler
-    $('#withdraw-btn').click(function () {
-        withdraw()
-    }) // Withdraw click handler
-    $('#sell-tokens-btn-m').click(function () {
-        contract.sell(function (e, r) {
-            console.log(e, r)
-        })
-    })
-    $('#reinvest-btn-m').click(function () {
-        contract.reinvest(function (e, r) {
-            console.log(e, r)
-        })
-    })
-    $('#withdraw-btn-m').click(function () {
-        contract.withdraw(function (e, r) {
-            console.log(e, r)
-        })
-    })
-    $('#currency').val(currency)
-
+    $('#sell-tokens-btn').click(function () {sell($("#sell-tokens-amount").val())});
+    $('#reinvest-btn').click(function () {reinvest()});
+    $('#withdraw-btn').click(function () {withdraw()});
+    $('#sell-tokens-btn-m').click(function () {contract.sell(function (e, r) {console.log(e, r)})});
+    $('#reinvest-btn-m').click(function () {contract.reinvest(function (e, r) {console.log(e, r)})});
+    $('#withdraw-btn-m').click(function () {contract.withdraw(function (e, r) {console.log(e, r)})});
+    $('#currency').val(currency);
+    
     $('#currency').change(function () {
         currency = $(this).val()
         updateEthPrice()
     })
 
-    updateEthPrice()
+    updateEthPrice();
 
     $('#purchase-amount').bind("keypress keyup click", function (e) {
         var number = $('#purchase-amount').val();
@@ -776,26 +307,13 @@ function updateData() {
 
     if (loggedIn) {
         contract.balanceOf(currentAddress, function (e, r) {
-            const tokenAmount = (r / 1e18 * 0.9999)
+            const tokenAmount = (r / 1e18)
             $('.balance').text(Number(tokenAmount.toFixed(2)).toLocaleString())
             contract.calculateBNBReceived(r, function (e, r) {
                 let bal = convertWeiToEth(r)
                 $('.value').text(bal.toFixed(4))
                 $('.value-usd').text(Number((convertWeiToEth(r * 1) * usdPrice).toFixed(2)).toLocaleString())
-                if (tokenBalance !== 0) {
-                    if (bal > tokenBalance) {
-                        $('.value').addClass('up').removeClass('down')
-                        setTimeout(function () {
-                            $('.value').removeClass('up')
-                        }, 3000)
-                    } else if (bal < tokenBalance) {
-                        $('.value').addClass('down').removeClass('up')
-                        setTimeout(function () {
-                            $('.value').removeClass('down')
-                        }, 3000)
-                    }
-                }
-                tokenBalance = bal
+                tokenAmount = bal
             })
         })
 
@@ -826,19 +344,12 @@ function updateData() {
             }
         })
 
-        contract.totalReferralsOf(currentAddress, function (e, r) {
-            $('#refUseCount').text(r)
-        })
-
-        contract.totalReferralEarningsOf(currentAddress, function (e, r) {
-            $('#totalRefEarnings').text((r / 1e18).toFixed(3))
-        })
-
-        web3js.eth.getBalance(currentAddress, function (e, r) {
-            // We only want to show six DP in a wallet, consistent with MetaMask
-            $('.address-balance').text(convertWeiToEth(r).toFixed(6) + ' BNB')
-        })
-    } else {}
+        contract.totalReferralsOf(currentAddress, function (e, r) {$('#refUseCount').text(r)});
+        contract.totalReferralEarningsOf(currentAddress, function (e, r) {$('#totalRefEarnings').text((r / 1e18).toFixed(3))});
+        web3js.eth.getBalance(currentAddress, function (e, r) {$('.address-balance').text(convertWeiToEth(r).toFixed(6) + ' BNB')});
+    } else {
+        
+    }
 
     contract.buyPrice(function (e, r) {
         let buyPrice = convertWeiToEth(r)
@@ -870,42 +381,41 @@ function updateData() {
     })
 
     $('#purchase-amount').on('input change', function () {
-        var value = parseFloat($(this).val()) * 0.65;
+        var incomingBNB = parseFloat($(this).val() * 0.9);
         var tokenPriceInitial_ = 0.0000001;
         var tokenPriceIncremental_ = 0.00000001;
-
-
-        if (value === 0 || Number.isNaN(value)) {
+        
+        // If there's no text, or value is zero, don't show anything in the hint.
+        if (incomingBNB === 0 || Number.isNaN(incomingBNB)) {
             $('#deposit-hint').text("");
             return;
         }
 
-        if (value > 0) {
-            contract.sellPrice(function (e, r) {
-                let sellPrice = convertWeiToEth(r)
-                var tokens = value / sellPrice;
+        if (incomingBNB > 0) {
+            contract.buyPrice(function (e, r) {
+                let sellPrice = convertWeiToEth(r);
+                var tokens = incomingBNB / sellPrice;
                 $('#deposit-hint').text("You will receive about " + tokens.toFixed(0) + " B1VS");
             })
         }
-
-    })
+    });
 
     $('#sell-tokens-amount').on('input change', function () {
-        var value = parseFloat($(this).val()) * 0.65;
+        var incomingB1VS = parseFloat($(this).val() * 0.9);
         var tokenPriceInitial_ = 0.0000001;
         var tokenPriceIncremental_ = 0.00000001;
 
-
-        if (value === 0 || Number.isNaN(value)) {
+        // If there's no text, or value is zero, don't show anything in the hint.
+        if (incomingB1VS === 0 || Number.isNaN(incomingB1VS)) {
             $('#withdraw-hint').text("");
             return;
         }
 
-        if (value > 0) {
-            contract.buyPrice(function (e, r) {
+        if (incomingB1VS > 0) {
+            contract.sellPrice(function (e, r) {
                 let buyPrice = convertWeiToEth(r)
-                var tokens = value * buyPrice;
-                $('#withdraw-hint').text("You will receive about " + tokens.toFixed(2) + " BNB");
+                var tokens = incomingB1VS * buyPrice;
+                $('#withdraw-hint').text("You will receive about " + tokens.toFixed(0) + " BNB");
             })
         }
 
@@ -927,11 +437,11 @@ function updateTokenInfo() {
 }
 
 function attachEvents() {
-    // Always start from 10 blocks behind
+    // Always start from 3 blocks behind
     web3js.eth.getBlockNumber(function (error, result) {
         console.log("Current Block Number is", result);
         contract.allEvents({
-            fromBlock: result - 17,
+            fromBlock: result - 3,
         }, function (e, result) {
             let currentUserEvent = web3.eth.accounts[0] == result.args.customerAddress;
             switch (result.event) {
