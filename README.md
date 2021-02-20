@@ -12,24 +12,31 @@
     </a>
 </p>
 
-> An implementation of &#34;Proof of Weak Hands&#34; Hourglass contract, for use on Binance Smart Chain
+> An implementation of the Hourglass (&#34;Proof of Weak Hands&#34;) smart contract, with an accompanying Dapp, suitable for Binance Smart Chain. 
+
+B1VS Hourglass is a customised implementation of the "Proof of Weak Hands" game-theory, popularly known also as the Hourglass contract, or "PoWH".
 
 ### 🏠 [Homepage](https://functionisland.net)
 
 ![B1VS Dapp - Homepage](https://github.com/MrFUNCT1ON/BSC-Hourglass-Dapp/blob/main/screenshots/image_1.png)
 
+To use the B1VS Hourglass Dapp, you will need a wallet extension such as MetaMask, and the correct settings to connect to the Binance Smart Chain. [Here's a link](https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain) with details on how to configure MetaMask with those settings.
+
 ### ✨ [Demo](https://functionisland.net/dashboard.html)
 
 ![B1VS Dapp - Dashboard](https://github.com/MrFUNCT1ON/BSC-Hourglass-Dapp/blob/main/screenshots/image_2.png)
 
+Perhaps the most interesting fact of the B1VS Hourglass is its ability to act as both a game and a system of passive income. As people buy, sell and transfer their B1VS shares between addresses, you will earn BNB dividends (proportionate to your holding percentage of the B1VS supply). In this way, you could earn a passive income stream while others attempt to play the market factors of the B1VS Hourglass contract.
+
+Alternatively, you could try to buy low and sell high with B1VS shares - the price rises incrementally with every B1VS share bought, and decreases incrementally with every one sold! The choice is yours, and everyone is free to sell all their B1VS and withdraw BNB from the Hourglass contract at any time.
 
 ## Author
 
 👤 **Function Island**
 
-* Website: https://functionisland.com
-* Twitter: [@MrFUNCT1ON](https://twitter.com/MrFUNCT1ON)
-* Github: [@MrFUNCT1ON](https://github.com/MrFUNCT1ON)
+* Website: https://functionisland.com/about.html
+* Twitter: [@FunctionIsland](https://twitter.com/FunctionIsland)
+* Github: [@FunctionIsland](https://github.com/FunctionIsland)
 
 ## Show your support
 
