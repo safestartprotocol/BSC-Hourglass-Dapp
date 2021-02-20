@@ -35,14 +35,11 @@ let myStrongHandInstance;
 
 function startDapp() {
     myStrongHand();
-    searchStrongHands();
 }
 
 function myStrongHand() {
     strongHandsManagerInstance.isGodlyChad((error, isGodlyChad) => {
         if (isGodlyChad) {
-            el('#mystronghand').innerHTML = '<table><thead><tr><th>Contract</th><th>Balance</th><th>Dividends</th><th>Status</th><th>Days</th><th>Created</th></tr></thead><tbody><tr><td id="address"></td><td id="myp3dbalance"></td><td id="mydividends"></td><td id="mystatus"></td><td id="locktime"></td><td id="created"></td></tr></tbody></table>';
-
             el('#myDepositPanel').innerHTML += '<h3>Deposit BNB &amp; lock B1VS</h3>';
             el('#myDepositPanel').innerHTML += '<input id="buyamount" type="number" placeholder="Amount to spend (BNB)" class="form-control roundedCorners" /><br />';
             el('#myDepositPanel').innerHTML += ' <button type="button" onclick="buyP3D()" class="btn btn-md btn-dark btn-block btn-outline-success roundedCorners">Buy/Lock up B1VS</button>';
@@ -73,7 +70,8 @@ function myStrongHand() {
                 myStrongHandInstance.isLocked((error, isLocked) => {
                     if (isLocked) {
                         myStrongHandInstance.lockedUntil((error, lockedUntil) => {
-                            el('#mystatus').innerHTML = '<b>LOCKED UNTIL</b> ' + new Date(lockedUntil * 1000);
+                            el('#mystatus').innerHTML = '<b class="text-danger">LOCKED</b>';
+                            el('#lockedUntil').innerHTML = new Date(lockedUntil * 1000);
                         });
                     } else {
                         el('#mySellPanel').innerHTML = '<h3 class="text-success">UNLOCKED</h3>';
@@ -87,54 +85,16 @@ function myStrongHand() {
                     el('#locktime').innerHTML = unlockAfterNDays;
                 });
                 myStrongHandInstance.creationDate((error, creationDate) => {
-                    el('#created').innerHTML = new Date(creationDate * 1000);
+                    var _date = new Date(creationDate * 1000);
+                    el('#created').innerHTML = (_date.getDate() + "/" + _date.getMonth() + "/" + _date.getFullYear());
                 });
             });
 
         } else {
             el('#setupPanel').innerHTML = '<h3>Create a Gauntlet</h3><input id="locktime" type="number" placeholder="LOCK TIME (days)" min="0"step="1" class="form-control roundedCorners"  /><br />'
-            el('#setupPanel').innerHTML += '<button type="button" onclick="getStrong()" class="btn btn-block btn-md btn-dark btn-outline-success roundedCorners">Become a Strong Hand!</button>'
+            el('#setupPanel').innerHTML += '<button type="button" onclick="getStrong()" class="btn btn-block btn-lg btn-dark btn-outline-success roundedCorners">Become a Strong Hand!</button>'
         }
     });
-}
-
-const promisify = (inner) =>
-    new Promise((resolve, reject) =>
-        inner((err, res) => {
-            if (err) {
-                reject(err)
-            }
-            resolve(res);
-        })
-    );
-
-async function searchStrongHands() {
-    const events = await promisify(eventResult => strongHandsManagerInstance.CreatedGauntlet({}, {
-        fromBlock: 6476646,
-        toBlock: 'latest'
-    }).get(eventResult));
-    for (let i = 0; i < events.length; i++) {
-        let ownerAddress = events[i].args.owner;
-        let strongHandAddress = events[i].args.strongHand;
-        let strongHandInstance = strongHandContract.at(strongHandAddress);
-
-        const balance = await promisify(p3dBalance => strongHandInstance.balanceOf(p3dBalance));
-        if (balance > 0) {
-            el('#stronghands').innerHTML += '<tr><td id="owner' + i + '"><td id="p3dbalance' + i + '"></td><td id="status' + i + '"></td></tr>';
-            el('#p3dbalance' + i).innerHTML = web3.fromWei(balance, 'ether').toFixed(6) + ' P3D';
-            el('#owner' + i).innerHTML = name;
-
-            strongHandInstance.isLocked((error, isLocked) => {
-                if (isLocked) {
-                    strongHandInstance.lockedUntil((error, lockedUntil) => {
-                        el('#status' + i).innerHTML = '<b>LOCKED UNTIL</b> ' + new Date(lockedUntil * 1000);
-                    });
-                } else {
-                    el('#status' + i).innerHTML = '<b>UNLOCKED</b>';
-                }
-            });
-        }
-    }
 }
 
 function getStrong() {
