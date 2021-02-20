@@ -30,6 +30,21 @@ Perhaps the most interesting fact of the B1VS Hourglass is its ability to act as
 
 Alternatively, you could try to buy low and sell high with B1VS shares - the price rises incrementally with every B1VS share bought, and decreases incrementally with every one sold! The choice is yours, and everyone is free to sell all their B1VS and withdraw BNB from the Hourglass contract at any time.
 
+## Important Information
+
+➡ Using this Interface
+This web-based interface for B1VS Hourglass carries the ability to handle referral addresses in calls to the `purchaseTokens()` function. If no referrer address is detected after `/dashboard.html?masternode=`, MrFUNCT1ON's wallet address is set as the referrer.
+
+➡ Contract Notes
+ - The Hourglass contract has MrFUNCT1ON set as the referrer for all `reinvest()` calls.
+ - The Gauntlets contract has MrFUNCT1ON set as the referrer.
+
+👤 **Function Island**
+
+* Website: https://functionisland.com/about.html
+* Twitter: [@FunctionIsland](https://twitter.com/FunctionIsland)
+* Github: [@FunctionIsland](https://github.com/FunctionIsland)
+
 ## Author
 
 👤 **Function Island**
