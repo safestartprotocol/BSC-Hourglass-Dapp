@@ -77,7 +77,7 @@ function myStrongHand() {
                         el('#mySellPanel').innerHTML = '<h3 class="text-success">UNLOCKED</h3>';
                         el('#mySellPanel').innerHTML += ' <strong>Sell B1VS</strong>';
                         el('#mySellPanel').innerHTML += ' <input id="sellamount" type="number" placeholder="Amount to Sell (B1VS)" class="form-control roundedCorners" />';
-                        el('#mySellPanel').innerHTML += ' <button type="button" onclick="sell()">Sell B1VS</button>';
+                        el('#mySellPanel').innerHTML += ' <button type="button" onclick="sell()" class="btn btn-block btn-md btn-dark btn-outline-danger roundedCorners">Sell B1VS</button>';
                     }
                 });
 
@@ -132,7 +132,7 @@ function withdrawDividends() {
 function reinvestDividends() {
     myStrongHandInstance.reinvest((error, result) => {
         if (!error) {
-            alertify.success("Buying B1VS Shares, please wait...");
+            alertify.success("Reinvesting B1VS Shares, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }
@@ -142,7 +142,7 @@ function reinvestDividends() {
 function extendLock() {
     myStrongHandInstance.extendLock(el('#extendlocktime').value, (error, result) => {
         if (!error) {
-            alertify.success("Buying B1VS Shares, please wait...");
+            alertify.success("Extending Lock, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }
@@ -152,7 +152,7 @@ function extendLock() {
 function sell() {
     myStrongHandInstance.sell(web3.toWei(el('#sellamount').value, 'ether'), (error, result) => {
         if (!error) {
-            alertify.success("Buying B1VS Shares, please wait...");
+            alertify.success("Selling B1VS Shares, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }
