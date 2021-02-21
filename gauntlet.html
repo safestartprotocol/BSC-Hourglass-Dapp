@@ -6,6 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no' />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@FunctionIsland" />
+    <meta name="twitter:title" content="B1VS - Function Island" />
+    <meta name="twitter:description" content="B1VS Hourglass is an implementation of the classic Proof-of-Weak-Hands game theory as a smart contract and Dapp on Binance Smart Chain." />
+    <meta name="twitter:image" content="https://functionisland.net/assets/img/coin.png" />
+
+    <meta property="og:url" content="https://functionisland.net" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="B1VS - Function Island" />
+    <meta property="og:description" content="B1VS Hourglass is an implementation of the classic Proof-of-Weak-Hands game theory as a smart contract and Dapp on Binance Smart Chain." />
+    <meta property="og:image" content="https://functionisland.net/assets/img/coin.png" />
+
     <meta name="description" content="B1VS - Function Island">
     <meta name="author" content="Function Island">
 
@@ -194,49 +206,60 @@
             </div>
             <hr />
 
-            <div class="card bg-primary text-white whiteBorder roundedCorners">
-                <div class="card-header">
-                    <h4 class="text-white">Gauntlet Controls</h4>
+            <div class="row">
+                <div class="col text-center">
+                    <div class="card bg-primary text-white whiteBorder roundedCorners">
+                        <div class="card-header">
+                            <h4 class="text-white">Gauntlet Controls</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <span id="setupPanel"></span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col text-center" id="myDepositPanel">
+                                    <h3 class="text-white">Deposit BNB &amp; lock B1VS</h3>
+                                    <input id="buyamount" type="number" placeholder="Amount to spend (BNB)" class="form-control roundedCorners" /><br />
+                                    <button type="button" onclick="buyB1VS()" class="btn btn-md btn-dark btn-block btn-outline-success roundedCorners">Buy/Lock up B1VS</button>
+                                </div>
+
+                                <div class="col text-center" id="myTimePanel">
+                                    <h3 class="text-white">Extend your Time</h3>
+                                    <input id="extendlocktime" type="number" placeholder="lock time (days)" min="1" step="1" class="form-control roundedCorners" /><br />
+                                    <button type="button" onclick="extendLock()" class="btn btn-md btn-dark btn-block btn-outline-warning roundedCorners">Extend Lock Time</button>
+                                </div>
+                            </div>
+                            <br />
+
+                            <div class="row">
+                                <div class="col text-center" id="myControlsPanel">
+                                    <h3 class="text-white">Collect &amp; Reinvest</h3>
+                                    <button type="button" onclick="reinvestDividends()" class="btn btn-md btn-dark btn-block btn-outline-info roundedCorners">Reinvest Dividends</button>
+                                    <button type="button" onclick="withdrawDividends()" class="btn btn-md btn-dark btn-block btn-outline-danger roundedCorners">Withdraw Dividends</button>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col text-center" id="mySellPanel">
+                                    <h3 class="text-success">UNLOCKED</h3>
+                                    <strong>Sell B1VS</strong>
+                                    <input id="sellamount" type="number" placeholder="Amount to Sell (B1VS)" class="form-control roundedCorners" />
+                                    <button type="button" onclick="sell()" class="btn btn-block btn-md btn-dark btn-outline-danger roundedCorners">Sell B1VS</button>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col text-center">
-                            <span id="setupPanel"></span>
-                        </div>
-                    </div>
+            </div>
+            <br />
 
-                    <div class="row">
-                        <div class="col text-center" id="myDepositPanel">
-                            <h3 class="text-white">Deposit BNB &amp; lock B1VS</h3>
-                            <input id="buyamount" type="number" placeholder="Amount to spend (BNB)" class="form-control roundedCorners" /><br />
-                            <button type="button" onclick="buyB1VS()" class="btn btn-md btn-dark btn-block btn-outline-success roundedCorners">Buy/Lock up B1VS</button>
-                        </div>
-
-                        <div class="col text-center" id="myTimePanel">
-                            <h3 class="text-white">Extend your Time</h3>
-                            <input id="extendlocktime" type="number" placeholder="lock time (days)" min="1" step="1" class="form-control roundedCorners" /><br />
-                            <button type="button" onclick="extendLock()" class="btn btn-md btn-dark btn-block btn-outline-warning roundedCorners">Extend Lock Time</button>
-                        </div>
-                    </div>
-                    <br />
-
-                    <div class="row">
-                        <div class="col text-center" id="myControlsPanel">
-                            <h3 class="text-white">Collect &amp; Reinvest</h3>
-                            <button type="button" onclick="reinvestDividends()" class="btn btn-md btn-dark btn-block btn-outline-info roundedCorners">Reinvest Dividends</button>
-                            <button type="button" onclick="withdrawDividends()" class="btn btn-md btn-dark btn-block btn-outline-danger roundedCorners">Withdraw Dividends</button>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center" id="mySellPanel">
-                            <h3 class="text-success">UNLOCKED</h3>
-                            <strong>Sell B1VS</strong>
-                            <input id="sellamount" type="number" placeholder="Amount to Sell (B1VS)" class="form-control roundedCorners" />
-                            <button type="button" onclick="sell()" class="btn btn-block btn-md btn-dark btn-outline-danger roundedCorners">Sell B1VS</button>
-                        </div>
-                    </div>
-                    <hr />
+            <div class="row">
+                <div class="col text-center">
+                    <a class="btn btn-block btn-lg btn-dark btn-outline-light roundedCorners">Gauntlet Manager Contract</a>
                 </div>
             </div>
         </div>
