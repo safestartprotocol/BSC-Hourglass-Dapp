@@ -291,7 +291,7 @@ window.addEventListener('load', function () {
         copyToClipboard('http://127.0.0.1:8080/dashboard.html?ref=' + currentAddress);
         alertify.success('Copied Referral Link!');
     });
-})
+});
 
 function updateData() {
     clearTimeout(dataTimer);

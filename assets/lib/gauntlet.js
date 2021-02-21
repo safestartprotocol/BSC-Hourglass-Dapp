@@ -34,28 +34,16 @@ strongHandContract = web3.eth.contract([{"constant":true,"inputs":[],"name":"cre
 let myStrongHandInstance;
 
 function startDapp() {
-    myStrongHand();
+    setInterval(myStrongHand, 3000);
+    console.log("tick 1");
 }
 
 function myStrongHand() {
     strongHandsManagerInstance.isGodlyChad((error, isGodlyChad) => {
         if (isGodlyChad) {
-            el('#myDepositPanel').innerHTML += '<h3>Deposit BNB &amp; lock B1VS</h3>';
-            el('#myDepositPanel').innerHTML += '<input id="buyamount" type="number" placeholder="Amount to spend (BNB)" class="form-control roundedCorners" /><br />';
-            el('#myDepositPanel').innerHTML += ' <button type="button" onclick="buyP3D()" class="btn btn-md btn-dark btn-block btn-outline-success roundedCorners">Buy/Lock up B1VS</button>';
-            el('#myDepositPanel').innerHTML += ' <br />';
-            el('#myDepositPanel').innerHTML += ' <hr />';
-            
-            
-            el('#myTimePanel').innerHTML += ' <h3>Extend your Time</h3>';
-            el('#myTimePanel').innerHTML += ' <input id="extendlocktime" type="number" placeholder="lock time (days)" min="1"step="1" class="form-control roundedCorners" /><br />';
-            el('#myTimePanel').innerHTML += ' <button type="button" onclick="extendLock()" class="btn btn-md btn-dark btn-block btn-outline-warning roundedCorners">Extend Lock Time</button>';
-            el('#myTimePanel').innerHTML += ' <br />';
-            el('#myTimePanel').innerHTML += ' <hr />';
-            
-            el('#myControlsPanel').innerHTML += ' <h3>Collect &amp; Reinvest</h3>';
-            el('#myControlsPanel').innerHTML += ' <button type="button" onclick="reinvestDividends()" class="btn btn-md btn-dark btn-block btn-outline-info roundedCorners">Reinvest Dividends</button>';
-            el('#myControlsPanel').innerHTML += ' <button type="button" onclick="withdrawDividends()" class="btn btn-md btn-dark btn-block btn-outline-danger roundedCorners">Withdraw Dividends</button>';
+            $("#myDepositPanel").show();
+            $('#myTimePanel').show();
+            $('#myControlsPanel').show();
 
             strongHandsManagerInstance.myGauntlet((error, myStrongHandAddress) => {
                 el('#address').innerHTML = myStrongHandAddress;
@@ -75,10 +63,7 @@ function myStrongHand() {
                             el('#lockedUntil').innerHTML = (_until.getDate() + "/" + (_until.getMonth() + 1) + "/" + _until.getFullYear());
                         });
                     } else {
-                        el('#mySellPanel').innerHTML = '<h3 class="text-success">UNLOCKED</h3>';
-                        el('#mySellPanel').innerHTML += ' <strong>Sell B1VS</strong>';
-                        el('#mySellPanel').innerHTML += ' <input id="sellamount" type="number" placeholder="Amount to Sell (B1VS)" class="form-control roundedCorners" />';
-                        el('#mySellPanel').innerHTML += ' <button type="button" onclick="sell()" class="btn btn-block btn-md btn-dark btn-outline-danger roundedCorners">Sell B1VS</button>';
+                        el('#mySellPanel').show();
                     }
                 });
 
@@ -108,7 +93,7 @@ function getStrong() {
     });
 }
 
-function buyP3D() {
+function buyB1VS() {
     myStrongHandInstance.buy({
         value: web3.toWei(el('#buyamount').value, 'ether')
     }, (error, result) => {
