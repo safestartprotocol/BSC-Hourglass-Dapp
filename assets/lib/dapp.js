@@ -1,5 +1,5 @@
 // CONSTANTS
-var contractAddress = '0x0c22C33eaEFC961Ed529a6Af4654B6c2f51c12D3';
+var contractAddress = '0x1b173752a08293baCf1B13f2c3201715e45483aD';
 
 // GLOBALS
 var web3Mode = null;

@@ -26,7 +26,7 @@ let el = function (id) {
     return document.querySelector(id);
 };
 
-let strongHandsManagerAddress = '0x7f922e7313ac76bb3eD4B32Fd82B1aC482704984';
+let strongHandsManagerAddress = '0x1AB23a3C2d362Bd8BF14770Ed4514aDa1f076cE2';
 let strongHandsManagerContract = web3.eth.contract([{"constant":false,"inputs":[{"name":"_unlockAfterNDays","type":"uint256"}],"name":"create","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"strongHand","type":"address"}],"name":"CreatedGauntlet","type":"event"},{"constant":true,"inputs":[],"name":"isGodlyChad","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"myGauntlet","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"strongHands","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]);
 let strongHandsManagerInstance = strongHandsManagerContract.at(strongHandsManagerAddress);
 
