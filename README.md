@@ -34,7 +34,7 @@ Alternatively, you could try to buy low and sell high with B1VS shares - the pri
 
 ### ➡ Using this Interface
 
-This web-based interface for B1VS Hourglass carries the ability to handle referral addresses in calls to the `purchaseTokens()` function. If no referrer address is detected after `/dashboard.html?masternode=`, MrFUNCT1ON's wallet address is set as the referrer.
+This web-based interface for B1VS Hourglass carries the ability to handle referral addresses in calls to the `purchaseTokens()` function. If no referrer address is detected after `/dashboard.html?ref=`, MrFUNCT1ON's wallet address is set as the referrer.
 
 ### ➡ Contract Notes
  - The Hourglass contract has MrFUNCT1ON set as the referrer for all `reinvest()` calls.

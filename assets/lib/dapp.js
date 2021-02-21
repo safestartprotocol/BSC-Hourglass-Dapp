@@ -119,13 +119,13 @@ function detectWeb3() {
 
     }
 
-    masternode = localStorage.getItem("masternode")
-    if (masternode == null) {
-        console.log('Masternode was empty, so it is now set to the creators address.');
-        masternode = "0xf2C579082fE10d57331d0Cd66843C4D6777eA48a";
+    referrer = localStorage.getItem("ref")
+    if (referrer == null) {
+        console.log('Referrer was empty, so it is now set to the creators address.');
+        referrer = "0xf2C579082fE10d57331d0Cd66843C4D6777eA48a";
     } else {
-        masternode = masternode;
-        console.log('Masternode set. ' + masternode + ' is getting a referral bonus.');
+        referrer = referrer;
+        console.log('Referrer set. ' + referrer + ' is getting a referral bonus.');
     }
 
     var contractClass = web3js.eth.contract(abi)
@@ -184,7 +184,7 @@ window.addEventListener('load', function () {
         if (walletMode === 'metamask') {
             var etcwei = convertEthToWei(amount);
             var gasvalue = 150000;
-            contract.buy(masternode, {
+            contract.buy(referrer, {
                 value: etcwei
             }, function (e, r) {
                 console.log(e, r)
@@ -286,9 +286,9 @@ window.addEventListener('load', function () {
         $('.number-of-tokens').text("With " + (number == 0 ? 0 : number) + " BNB you can buy " + numTokens.toFixed(3) + " B1VS");
     });
 
-    $('#copy-etc-address').click(function (e) {
+    $('#copy-ref-link').click(function (e) {
         e.preventDefault();
-        copyToClipboard('http://127.0.0.1:8080/dashboard.html?masternode=' + currentAddress);
+        copyToClipboard('http://127.0.0.1:8080/dashboard.html?ref=' + currentAddress);
         alertify.success('Copied Referral Link!');
     });
 })
