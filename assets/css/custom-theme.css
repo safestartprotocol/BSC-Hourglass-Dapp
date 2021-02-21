@@ -6,8 +6,8 @@ html, body {
 }
 
 body {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(116, 45, 167) 100%);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 100%);
 }
 
 table {

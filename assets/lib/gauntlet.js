@@ -77,7 +77,7 @@ function myStrongHand() {
             });
 
         } else {
-            el('#setupPanel').innerHTML = '<h3>Create a Gauntlet</h3><input id="locktime" type="number" placeholder="LOCK TIME (days)" min="0"step="1" class="form-control roundedCorners"  /><br />'
+            el('#setupPanel').innerHTML = '<h3 class="text-white">Create a Gauntlet</h3><input id="locktime" type="number" placeholder="LOCK TIME (days)" min="0"step="1" class="form-control roundedCorners"  /><br />'
             el('#setupPanel').innerHTML += '<button type="button" onclick="getStrong()" class="btn btn-block btn-lg btn-dark btn-outline-success roundedCorners">Become a Strong Hand!</button>'
         }
     });

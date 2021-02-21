@@ -28,7 +28,7 @@
 
 <body class="text-white">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark darkNavbar fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary darkNavbar fixed-top">
             <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="40px" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -97,7 +97,7 @@
 
     <main style="margin-top: 120px;">
         <div class="container">
-            <div class="jumbotron bg-dark text-white roundedCorners whiteBorder">
+            <div class="jumbotron bg-primary text-white roundedCorners whiteBorder">
                 <div class="container">
                     <div class="row">
                         <div class="col text-center">
@@ -123,17 +123,17 @@
             
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card bg-dark text-white whiteBorder roundedCorners">
-                        <div class="card-header"><h4>My Gauntlet</h4></div>
+                    <div class="card bg-primary text-white whiteBorder roundedCorners">
+                        <div class="card-header"><h4 class="text-white">My Gauntlet</h4></div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col text-center">
-                                    <h4><span id="myp3dbalance">0 B1VS</span></h4>
+                                    <h4 class="text-white"><span id="myp3dbalance">0 B1VS</span></h4>
                                     <small>Balance</small>
                                 </div>
                                 
                                 <div class="col text-center">
-                                    <h4><span id="mydividends">0 BNB</span></h4>
+                                    <h4 class="text-white"><span id="mydividends">0 BNB</span></h4>
                                     <small>Dividends</small>
                                 </div>
                             </div>
@@ -151,17 +151,17 @@
                 </div>
                 
                 <div class="col-md-6">
-                    <div class="card bg-dark text-white whiteBorder roundedCorners">
-                        <div class="card-header"><h4>Gauntlet Details</h4></div>
+                    <div class="card bg-primary text-white whiteBorder roundedCorners">
+                        <div class="card-header"><h4 class="text-white">Gauntlet Details</h4></div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col text-center">
-                                    <h4><span id="mystatus">-</span></h4>
+                                    <h4 class="text-white"><span id="mystatus">-</span></h4>
                                     <small>Current Status</small>
                                 </div>
                                 
                                 <div class="col text-center">
-                                    <h4><span id="daysUntil">-</span></h4>
+                                    <h4 class="text-white"><span id="daysUntil">-</span></h4>
                                     <small>Lock Days</small>
                                 </div>
                             </div>
@@ -190,7 +190,8 @@
             </div>
             <hr />
 
-            <div class="card bg-dark text-white whiteBorder roundedCorners">
+            <div class="card bg-primary text-white whiteBorder roundedCorners">
+                <div class="card-header"><h4 class="text-white">Gauntlet Controls</h4></div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col text-center">
@@ -200,13 +201,13 @@
 
                     <div class="row">
                         <div class="col text-center" id="myDepositPanel">
-                            <h3>Deposit BNB &amp; lock B1VS</h3>
+                            <h3 class="text-white">Deposit BNB &amp; lock B1VS</h3>
                             <input id="buyamount" type="number" placeholder="Amount to spend (BNB)" class="form-control roundedCorners" /><br />
                             <button type="button" onclick="buyB1VS()" class="btn btn-md btn-dark btn-block btn-outline-success roundedCorners">Buy/Lock up B1VS</button>
                         </div>
 
                         <div class="col text-center" id="myTimePanel">
-                            <h3>Extend your Time</h3>
+                            <h3 class="text-white">Extend your Time</h3>
                             <input id="extendlocktime" type="number" placeholder="lock time (days)" min="1"step="1" class="form-control roundedCorners" /><br />
                             <button type="button" onclick="extendLock()" class="btn btn-md btn-dark btn-block btn-outline-warning roundedCorners">Extend Lock Time</button>
                         </div>
@@ -215,7 +216,7 @@
 
                     <div class="row">
                         <div class="col text-center" id="myControlsPanel">
-                            <h3>Collect &amp; Reinvest</h3>
+                            <h3 class="text-white">Collect &amp; Reinvest</h3>
                             <button type="button" onclick="reinvestDividends()" class="btn btn-md btn-dark btn-block btn-outline-info roundedCorners">Reinvest Dividends</button>
                             <button type="button" onclick="withdrawDividends()" class="btn btn-md btn-dark btn-block btn-outline-danger roundedCorners">Withdraw Dividends</button>
                         </div>
