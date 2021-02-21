@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
     background: rgb(0, 0, 0);
@@ -6,92 +7,102 @@ html, body {
 }
 
 body {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(59,59,59,1) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(59, 59, 59, 1) 100%);
 }
 
 table {
-  border: 1px solid #ccc;
-  border-collapse: collapse;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  table-layout: fixed;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
 }
 
 table caption {
-  font-size: 1.5em;
-  margin: .5em 0 .75em;
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
 }
 
 table tr {
-  border: 1px solid #ddd;
-  padding: .35em;
+    border: 1px solid #ddd;
+    padding: .35em;
 }
 
 table th,
 table td {
-  padding: .625em;
-  text-align: center;
+    padding: .625em;
+    text-align: center;
 }
 
 table th {
-  font-size: .85em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 600px) {
-  table {
-    border: 0;
-  }
+    table {
+        border: 0;
+    }
 
-  table caption {
-    font-size: 1.3em;
-  }
-  
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
-  
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
-  }
-  
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .8em;
-    text-align: right;
-  }
-  
-  table td::before {
-    /*
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        /*
     * aria-label has no advantage, it won't be read inside a table
     content: attr(aria-label);
     */
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  table td:last-child {
-    border-bottom: 0;
-  }
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+.animatedZoom {
+    transition: transform .2s;
+    /* Animation */
+}
+
+.animatedZoom:hover {
+    transform: scale(1.5);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .glassPanel {
-    background-color: rgba(0,0,0,0.65);
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
 .animatedZoom {
@@ -110,19 +121,45 @@ table th {
 
 /* Rounded Corner FX */
 /* 0,0,0,0 - top left, top right, bottom right, bottom left */
-.rcTopLeft      {border-radius: 10px  0px  0px  0px;}
-.rcTopRight     {border-radius:  0px 10px  0px  0px;}
-.rcBottomLeft   {border-radius:  0px  0px  0px 10px;}
-.rcBottomRight  {border-radius: 10px  0px 10px  0px;}
+.rcTopLeft {
+    border-radius: 10px 0px 0px 0px;
+}
 
-.rcTop          {border-radius: 10px 10px  0px  0px;}
-.rcBottom       {border-radius:  0px  0px 10px 10px;}
+.rcTopRight {
+    border-radius: 0px 10px 0px 0px;
+}
 
-.rcLeft         {border-radius: 10px  0px  0px 10px;}
-.rcRight        {border-radius:  0px 10px 10px  0px;}
+.rcBottomLeft {
+    border-radius: 0px 0px 0px 10px;
+}
 
-.roundedCorners {border-radius: 10px 10px 10px 10px;}
-.rcNone         {border-radius:  0px  0px  0px  0px;}
+.rcBottomRight {
+    border-radius: 10px 0px 10px 0px;
+}
+
+.rcTop {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.rcBottom {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.rcLeft {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.rcRight {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.roundedCorners {
+    border-radius: 10px 10px 10px 10px;
+}
+
+.rcNone {
+    border-radius: 0px 0px 0px 0px;
+}
 
 .pulseEffect {
     animation: pulse 3s infinite;
