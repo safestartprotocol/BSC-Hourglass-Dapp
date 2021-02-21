@@ -70,8 +70,9 @@ function myStrongHand() {
                 myStrongHandInstance.isLocked((error, isLocked) => {
                     if (isLocked) {
                         myStrongHandInstance.lockedUntil((error, lockedUntil) => {
+                            var _until = new Date(lockedUntil * 1000);
                             el('#mystatus').innerHTML = '<b class="text-danger">LOCKED</b>';
-                            el('#lockedUntil').innerHTML = new Date(lockedUntil * 1000);
+                            el('#lockedUntil').innerHTML = (_until.getDate() + "/" + (_until.getMonth() + 1) + "/" + _until.getFullYear());
                         });
                     } else {
                         el('#mySellPanel').innerHTML = '<h3 class="text-success">UNLOCKED</h3>';
@@ -86,7 +87,7 @@ function myStrongHand() {
                 });
                 myStrongHandInstance.creationDate((error, creationDate) => {
                     var _date = new Date(creationDate * 1000);
-                    el('#created').innerHTML = (_date.getDate() + "/" + _date.getMonth() + "/" + _date.getFullYear());
+                    el('#created').innerHTML = (_date.getDate() + "/" + (_date.getMonth() + 1) + "/" + _date.getFullYear());
                 });
             });
 
