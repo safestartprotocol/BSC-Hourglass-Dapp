@@ -123,7 +123,7 @@ function buyP3D() {
 function withdrawDividends() {
     myStrongHandInstance.withdrawDividends((error, result) => {
         if (!error) {
-            alertify.success("Buying B1VS Shares, please wait...");
+            alertify.success("Withdrawing Dividends, please wait...");
         } else {
             alertify.error("Failed - Try again or check Tx...")
         }
