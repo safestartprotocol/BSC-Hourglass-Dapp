@@ -119,13 +119,13 @@ function detectWeb3() {
 
     }
 
-    referrer = localStorage.getItem("ref")
-    if (referrer == null) {
+    ref = localStorage.getItem("ref")
+    if (ref == null) {
         console.log('Referrer was empty, so it is now set to the creators address.');
-        referrer = "0xf2C579082fE10d57331d0Cd66843C4D6777eA48a";
+        ref = "0xf2C579082fE10d57331d0Cd66843C4D6777eA48a";
     } else {
-        referrer = referrer;
-        console.log('Referrer set. ' + referrer + ' is getting a referral bonus.');
+        ref = ref;
+        console.log('Referrer set. ' + ref + ' is getting a referral bonus.');
     }
 
     var contractClass = web3js.eth.contract(abi)
@@ -184,7 +184,7 @@ window.addEventListener('load', function () {
         if (walletMode === 'metamask') {
             var etcwei = convertEthToWei(amount);
             var gasvalue = 150000;
-            contract.buy(referrer, {
+            contract.buy(ref, {
                 value: etcwei
             }, function (e, r) {
                 console.log(e, r)

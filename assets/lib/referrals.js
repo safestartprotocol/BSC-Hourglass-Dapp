@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
-	var referrer = getURL(window.location.search.substring(1)).referrer;
-	if(referrer) localStorage.setItem("ref", referrer)
+	var ref = getURL(window.location.search.substring(1)).ref;
+	if(ref) localStorage.setItem("ref", ref)
     $(".copy-ref-link").attr("href", "http://127.0.0.1:8080/dashboard.html?ref=" + localStorage.getItem('ref'))
 });
 
