@@ -83,7 +83,7 @@ function myStrongHand() {
                 });
 
                 myStrongHandInstance.unlockAfterNDays((error, unlockAfterNDays) => {
-                    el('#locktime').innerHTML = unlockAfterNDays;
+                    el('#daysUntil').innerHTML = unlockAfterNDays;
                 });
                 myStrongHandInstance.creationDate((error, creationDate) => {
                     var _date = new Date(creationDate * 1000);
