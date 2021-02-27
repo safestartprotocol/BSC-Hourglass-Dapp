@@ -31,6 +31,7 @@ var gauntletABI = ([{"constant":true,"inputs":[],"name":"creationDate","outputs"
 
 let strongHandsManagerAddress = '0x7f922e7313ac76bb3eD4B32Fd82B1aC482704984'; // Mainnet
 // let strongHandsManagerAddress = '0x1AB23a3C2d362Bd8BF14770Ed4514aDa1f076cE2'; // Testnet
+
 let strongHandsManagerContract = web3.eth.contract(strongHandsManagerABI);
 let strongHandsManagerInstance = strongHandsManagerContract.at(strongHandsManagerAddress);
 
@@ -54,12 +55,15 @@ function myStrongHand() {
                 el('#address').innerHTML = myStrongHandAddress;
 
                 myStrongHandInstance = strongHandContract.at(myStrongHandAddress);
-                myStrongHandInstance.balanceOf((error, myP3dBalance) => {
-                    el('#myb1vsbalance').innerHTML = web3.fromWei(myP3dBalance, 'ether').toFixed(2) + ' B1VS';
+                
+                myStrongHandInstance.balanceOf((error, myB1VSBalance) => {
+                    el('#myb1vsbalance').innerHTML = web3.fromWei(myB1VSBalance, 'ether').toFixed(4);
                 });
+                
                 myStrongHandInstance.dividendsOf((error, myDividends) => {
-                    el('#mydividends').innerHTML = web3.fromWei(myDividends, 'ether').toFixed(2) + ' BNB';
+                    el('#mydividends').innerHTML = web3.fromWei(myDividends, 'ether').toFixed(4);
                 });
+                
                 myStrongHandInstance.isLocked((error, isLocked) => {
                     if (isLocked) {
                         myStrongHandInstance.lockedUntil((error, lockedUntil) => {
