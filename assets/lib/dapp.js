@@ -1,564 +1,967 @@
-var _0x5b29 = ['apply', 'function\x20*', '\x5c(\x20*\x5c)', 'a-zA-Z_$][', '$]*)', 'test', 'chain', 'input', '0x0c22C33e', 'aEFC961Ed5', 'B6c2f51c12', 'undefined', 'USD', 'inputs', 'stateMutab', 'ility', 'nonpayable', 'type', 'constructo', 'address', 'name', 'from', 'indexed', 'internalTy', 'uint256', 'anonymous', 'Transfer', 'event', 'customerAd', 'dress', 'ted', 'onReinvest', 'ment', 'incomingBN', 'tokensMint', 'chase', 'tokensBurn', 'bnbEarned', 'onTokenSel', 'bnbWithdra', 'onWithdraw', '_customerA', 'ddress', 'function', 'buy', 'outputs', 'payable', 'view', '_tokensToS', 'calculateB', 'NBReceived', '_bnbToSpen', 'calculateT', 'okensRecei', 'ved', 'uint8', 'decimals', 'address\x20pa', 'yable', 'deployer', '_includeRe', 'ferralBonu', 'dividendsO', 'exit', 'bool', 'myDividend', 'myStatus', 'myTotalDep', 'myTotalRef', 'erralEarni', 'ngs', 'errals', 'myTotalWit', 'hdrawals', 'string', 'reinvest', '_amountOfT', 'okens', 'sell', 'sellPrice', '_user', 'statusOf', 'symbol', 'lance', 'totalDepos', 'totalRefer', 'sOf', 'ralsOf', 'totalSuppl', 'transfer', 'withdraw', 'receive', 'prototype', 'format', 'replace', 'toString', 'clipboardD', 'ata', 'setData', 'queryComma', 'ndSupporte', 'copy', 'createElem', 'ent', 'textConten', 'fixed', 'body', 'appendChil', 'select', 'execComman', 'warn', 'Copy\x20to\x20cl', 'iled.', 'removeChil', 'B1VS', 'getJSON', 'https://mi', 'n-api.cryp', 'tocompare.', 'com/data/p', 'BNB&tsyms=', 'pricefloor', 'Balance', 'call', 'fromWei', 'toNumber', 'Dividends', 'toFixed', 'html', 'addEventLi', 'stener', 'load', 'ethereum', 'web3', 'enable', 'currentPro', 'vider', 'Non-Ethere', 'um\x20browser', '\x20detected.', '\x20You\x20shoul', 'd\x20consider', 'metamask', 'eth', 'accounts', 'log', 'Referrer\x20w', 'so\x20it\x20is\x20n', 'the\x20creato', 'rs\x20address', '2fE10d5733', '1d0Cd66843', 'C4D6777eA4', 'Referrer\x20s', 'et.\x20', 'g\x20a\x20referr', 'al\x20bonus.', 'contract', 'getTransac', 'getGasPric', 'max', 'value', 'gasPrice', 'gasLimit', 'nonce', 'cookie', 'indexOf', 'length', 'substring', 'web', '#purchase-', 'amount', '#transfer-', 'tokens-btn', 'val', 'hey', 'isAddress', 'toBigNumbe', 'error', 'Uh-Oh!\x20Som', 'ething\x20wen', 't\x20wrong...', '\x20Try\x20again', '\x20later', 'An\x20error\x20o', 'ccured', 'Transfer\x20f', 'unctionali', 'ty\x20support', 'ed\x20only\x20wi', 'th\x20Metamas', 'k\x20or\x20Trust', '#sell-toke', 'ns-btn', 'click', 'ns-amount', 'btn', '#withdraw-', 'ns-btn-m', '#reinvest-', 'btn-m', 'change', 'bind', 'keypress\x20k', 'eyup\x20click', '.number-of', '-tokens', 'text', 'With\x20', 'an\x20buy\x20', '#copy-ref-', 'link', 'preventDef', 'ault', 'http://fun', 'ctionislan', 'board.html', '?ref=', 'success', 'Copied\x20Ref', 'erral\x20Link', 'defaultAcc', 'ount', '.balance', '#refdiv', 'toLocaleSt', 'ring', '#nonrefdiv', '-usd', '\x20BNB', '.div-usd', '.div', 'fadeTo', '#refUseCou', '#totalRefE', 'arnings', 'getBalance', 'alance', 'buyPrice', '.buy', '.buy-usd', '.contract-', 'tokens', 'ivs', '.sell', '.sell-usd', 'balance', 'balance-us', 'getBlockNu', 'mber', 'Current\x20Bl', 'ock\x20Number', '\x20is', 'fromBlock', 'allEvents', 'args', 'onTokenPur', 'You\x20Purcha', 'sed\x20', '\x20B1VS\x20for\x20', 'div', '\x20B1VS\x20was\x20', 'just\x20bough', 't\x20by\x20someo', 'ne,\x20for\x20', 'You\x20Sold\x20', '\x20BNB.', 'se\x20sold\x20to', 'kens.\x20They', '\x20received\x20', '\x20BNB\x20for\x20', 'Withdrawal', '\x20of\x20', '\x20Successfu', 'Your\x20reinv', 'estment\x20of', 'bnbReinves', 'BNB\x20has\x20yi', 'elded\x20', '\x20B1VS\x20toke', 'ns!', '.\x20B1VS\x20tok', 'ens!', 'Transfer\x20o', 'while\x20(tru', 'e)\x20{}', 'counter', 'debu', 'gger', 'action', 'stateObjec'];
-var _0x12dd = function (_0x392674, _0x49eb7e) {
-    _0x392674 = _0x392674 - 0x0;
-    var _0x12a572 = _0x5b29[_0x392674];
-    return _0x12a572;
-};
-var _0x231e83 = _0x12dd,
-    _0x12a572 = function () {
-        var _0x2f8bb5 = !![];
-        return function (_0x222582, _0x1ed1bb) {
-            var _0x1328d5 = _0x2f8bb5 ? function () {
-                var _0x3070ce = _0x12dd;
-                if (_0x1ed1bb) {
-                    var _0xd51ad4 = _0x1ed1bb[_0x3070ce(0x0)](_0x222582, arguments);
-                    return _0x1ed1bb = null, _0xd51ad4;
-                }
-            } : function () {};
-            return _0x2f8bb5 = ![], _0x1328d5;
-        };
-    }();
-(function () {
-    _0x12a572(this, function () {
-        var _0x100fb1 = _0x12dd,
-            _0x2c177a = new RegExp(_0x100fb1(0x1) + _0x100fb1(0x2)),
-            _0x1f6e22 = new RegExp('\x5c+\x5c+\x20*(?:[' + _0x100fb1(0x3) + '0-9a-zA-Z_' + _0x100fb1(0x4), 'i'),
-            _0x2c07ee = _0x49eb7e('init');
-        !_0x2c177a[_0x100fb1(0x5)](_0x2c07ee + _0x100fb1(0x6)) || !_0x1f6e22[_0x100fb1(0x5)](_0x2c07ee + _0x100fb1(0x7)) ? _0x2c07ee('0') : _0x49eb7e();
-    })();
-}());
-var contractAddress = _0x231e83(0x8) + _0x231e83(0x9) + '29a6Af4654' + _0x231e83(0xa) + 'D3',
-    web3Mode = null,
-    walletMode = 'metamask',
-    currentAddress = null,
-    keystore = null,
-    dividendValue = 0x0,
-    tokenBalance = 0x0,
-    contract = null,
-    muteSound = ![],
-    etctospend = 0x0,
-    buyPrice = 0x0,
-    globalBuyPrice = 0x0,
-    sellPrice = 0x0,
-    ethPrice = 0x0,
-    currency = typeof default_currency === _0x231e83(0xb) ? _0x231e83(0xc) : default_currency,
-    ethPriceTimer = null,
-    dataTimer = null,
-    infoTimer = null,
-    _0x2139f6 = {};
-_0x2139f6[_0x231e83(0xd)] = [], _0x2139f6[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x10), _0x2139f6[_0x231e83(0x11)] = _0x231e83(0x12) + 'r';
-var _0x4ed24 = {};
-_0x4ed24['indexed'] = !![], _0x4ed24['internalTy' + 'pe'] = _0x231e83(0x13), _0x4ed24[_0x231e83(0x14)] = _0x231e83(0x15), _0x4ed24[_0x231e83(0x11)] = _0x231e83(0x13);
-var _0x593ac5 = {};
-_0x593ac5[_0x231e83(0x16)] = !![], _0x593ac5[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x593ac5[_0x231e83(0x14)] = 'to', _0x593ac5['type'] = _0x231e83(0x13);
-var _0x46a122 = {};
-_0x46a122['indexed'] = ![], _0x46a122[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x46a122[_0x231e83(0x14)] = 'tokens', _0x46a122[_0x231e83(0x11)] = 'uint256';
-var _0x42c775 = {};
-_0x42c775[_0x231e83(0x19)] = ![], _0x42c775[_0x231e83(0xd)] = [_0x4ed24, _0x593ac5, _0x46a122], _0x42c775[_0x231e83(0x14)] = _0x231e83(0x1a), _0x42c775[_0x231e83(0x11)] = _0x231e83(0x1b);
-var _0x190c6a = {};
-_0x190c6a[_0x231e83(0x16)] = !![], _0x190c6a[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x190c6a[_0x231e83(0x14)] = _0x231e83(0x1c) + _0x231e83(0x1d), _0x190c6a[_0x231e83(0x11)] = 'address';
-var _0x355cb1 = {};
-_0x355cb1[_0x231e83(0x16)] = ![], _0x355cb1[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x355cb1['name'] = 'bnbReinves' + _0x231e83(0x1e), _0x355cb1[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x1b93e1 = {};
-_0x1b93e1[_0x231e83(0x16)] = ![], _0x1b93e1['internalTy' + 'pe'] = _0x231e83(0x18), _0x1b93e1[_0x231e83(0x14)] = 'tokensMint' + 'ed', _0x1b93e1[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x370cb1 = {};
-_0x370cb1['anonymous'] = ![], _0x370cb1['inputs'] = [_0x190c6a, _0x355cb1, _0x1b93e1], _0x370cb1[_0x231e83(0x14)] = _0x231e83(0x1f) + _0x231e83(0x20), _0x370cb1['type'] = 'event';
-var _0x564345 = {};
-_0x564345[_0x231e83(0x16)] = !![], _0x564345['internalTy' + 'pe'] = _0x231e83(0x13), _0x564345[_0x231e83(0x14)] = _0x231e83(0x1c) + _0x231e83(0x1d), _0x564345['type'] = _0x231e83(0x13);
-var _0x2a55fe = {};
-_0x2a55fe[_0x231e83(0x16)] = ![], _0x2a55fe[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x2a55fe[_0x231e83(0x14)] = _0x231e83(0x21) + 'B', _0x2a55fe[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x4418f8 = {};
-_0x4418f8[_0x231e83(0x16)] = ![], _0x4418f8['internalTy' + 'pe'] = 'uint256', _0x4418f8[_0x231e83(0x14)] = _0x231e83(0x22) + 'ed', _0x4418f8[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x3e64bf = {};
-_0x3e64bf[_0x231e83(0x16)] = !![], _0x3e64bf['internalTy' + 'pe'] = _0x231e83(0x13), _0x3e64bf[_0x231e83(0x14)] = 'referredBy', _0x3e64bf[_0x231e83(0x11)] = 'address';
-var _0x48cf54 = {};
-_0x48cf54[_0x231e83(0x19)] = ![], _0x48cf54[_0x231e83(0xd)] = [_0x564345, _0x2a55fe, _0x4418f8, _0x3e64bf], _0x48cf54[_0x231e83(0x14)] = 'onTokenPur' + _0x231e83(0x23), _0x48cf54[_0x231e83(0x11)] = _0x231e83(0x1b);
-var _0x381977 = {};
-_0x381977['indexed'] = !![], _0x381977[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x381977[_0x231e83(0x14)] = _0x231e83(0x1c) + _0x231e83(0x1d), _0x381977[_0x231e83(0x11)] = _0x231e83(0x13);
-var _0x25a72f = {};
-_0x25a72f['indexed'] = ![], _0x25a72f[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x25a72f[_0x231e83(0x14)] = _0x231e83(0x24) + 'ed', _0x25a72f[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x1b619b = {};
-_0x1b619b['indexed'] = ![], _0x1b619b[_0x231e83(0x17) + 'pe'] = 'uint256', _0x1b619b[_0x231e83(0x14)] = _0x231e83(0x25), _0x1b619b[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x48d5a2 = {};
-_0x48d5a2['anonymous'] = ![], _0x48d5a2[_0x231e83(0xd)] = [_0x381977, _0x25a72f, _0x1b619b], _0x48d5a2[_0x231e83(0x14)] = _0x231e83(0x26) + 'l', _0x48d5a2[_0x231e83(0x11)] = _0x231e83(0x1b);
-var _0x4c5c15 = {};
-_0x4c5c15['indexed'] = !![], _0x4c5c15[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x4c5c15[_0x231e83(0x14)] = _0x231e83(0x1c) + _0x231e83(0x1d), _0x4c5c15['type'] = _0x231e83(0x13);
-var _0x5593f3 = {};
-_0x5593f3[_0x231e83(0x16)] = ![], _0x5593f3[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x5593f3[_0x231e83(0x14)] = _0x231e83(0x27) + 'wn', _0x5593f3[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x2ae5e0 = {};
-_0x2ae5e0[_0x231e83(0x19)] = ![], _0x2ae5e0[_0x231e83(0xd)] = [_0x4c5c15, _0x5593f3], _0x2ae5e0[_0x231e83(0x14)] = _0x231e83(0x28), _0x2ae5e0[_0x231e83(0x11)] = _0x231e83(0x1b);
-var _0x4afe88 = {};
-_0x4afe88[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x4afe88[_0x231e83(0x14)] = _0x231e83(0x29) + _0x231e83(0x2a), _0x4afe88[_0x231e83(0x11)] = 'address';
-var _0x366a9f = {};
-_0x366a9f[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x366a9f['name'] = '', _0x366a9f[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x2df63a = {};
-_0x2df63a[_0x231e83(0xd)] = [_0x4afe88], _0x2df63a['name'] = 'balanceOf', _0x2df63a['outputs'] = [_0x366a9f], _0x2df63a[_0x231e83(0xe) + _0x231e83(0xf)] = 'view', _0x2df63a[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x166a80 = {};
-_0x166a80['internalTy' + 'pe'] = _0x231e83(0x13), _0x166a80['name'] = '_referredB' + 'y', _0x166a80[_0x231e83(0x11)] = _0x231e83(0x13);
-var _0x93bd84 = {};
-_0x93bd84[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x93bd84['name'] = '', _0x93bd84[_0x231e83(0x11)] = 'uint256';
-var _0x49a774 = {};
-_0x49a774[_0x231e83(0xd)] = [_0x166a80], _0x49a774[_0x231e83(0x14)] = _0x231e83(0x2c), _0x49a774[_0x231e83(0x2d)] = [_0x93bd84], _0x49a774[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2e), _0x49a774[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x1c4a80 = {};
-_0x1c4a80['internalTy' + 'pe'] = 'uint256', _0x1c4a80[_0x231e83(0x14)] = '', _0x1c4a80['type'] = _0x231e83(0x18);
-var _0xda1861 = {};
-_0xda1861[_0x231e83(0xd)] = [], _0xda1861[_0x231e83(0x14)] = 'buyPrice', _0xda1861[_0x231e83(0x2d)] = [_0x1c4a80], _0xda1861[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0xda1861['type'] = _0x231e83(0x2b);
-var _0x29ce2e = {};
-_0x29ce2e[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x29ce2e[_0x231e83(0x14)] = _0x231e83(0x30) + 'ell', _0x29ce2e['type'] = 'uint256';
-var _0x1d11c5 = {};
-_0x1d11c5[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x1d11c5[_0x231e83(0x14)] = '', _0x1d11c5[_0x231e83(0x11)] = 'uint256';
-var _0xb203e = {};
-_0xb203e[_0x231e83(0xd)] = [_0x29ce2e], _0xb203e['name'] = _0x231e83(0x31) + _0x231e83(0x32), _0xb203e[_0x231e83(0x2d)] = [_0x1d11c5], _0xb203e[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0xb203e['type'] = _0x231e83(0x2b);
-var _0x454de9 = {};
-_0x454de9[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x454de9[_0x231e83(0x14)] = _0x231e83(0x33) + 'd', _0x454de9['type'] = _0x231e83(0x18);
-var _0x4e00da = {};
-_0x4e00da[_0x231e83(0x17) + 'pe'] = 'uint256', _0x4e00da[_0x231e83(0x14)] = '', _0x4e00da[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x3b23b6 = {};
-_0x3b23b6[_0x231e83(0xd)] = [_0x454de9], _0x3b23b6[_0x231e83(0x14)] = _0x231e83(0x34) + _0x231e83(0x35) + _0x231e83(0x36), _0x3b23b6[_0x231e83(0x2d)] = [_0x4e00da], _0x3b23b6[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0x3b23b6[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x274b7a = {};
-_0x274b7a[_0x231e83(0x17) + 'pe'] = _0x231e83(0x37), _0x274b7a[_0x231e83(0x14)] = '', _0x274b7a[_0x231e83(0x11)] = _0x231e83(0x37);
-var _0x56a9d8 = {};
-_0x56a9d8[_0x231e83(0xd)] = [], _0x56a9d8[_0x231e83(0x14)] = _0x231e83(0x38), _0x56a9d8[_0x231e83(0x2d)] = [_0x274b7a], _0x56a9d8[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0x56a9d8[_0x231e83(0x11)] = 'function';
-var _0x1ccd13 = {};
-_0x1ccd13[_0x231e83(0x17) + 'pe'] = _0x231e83(0x39) + _0x231e83(0x3a), _0x1ccd13['name'] = '', _0x1ccd13['type'] = _0x231e83(0x13);
-var _0x1dcd08 = {};
-_0x1dcd08[_0x231e83(0xd)] = [], _0x1dcd08[_0x231e83(0x14)] = _0x231e83(0x3b), _0x1dcd08[_0x231e83(0x2d)] = [_0x1ccd13], _0x1dcd08[_0x231e83(0xe) + 'ility'] = _0x231e83(0x2f), _0x1dcd08[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x4de36e = {};
-_0x4de36e['internalTy' + 'pe'] = 'address', _0x4de36e[_0x231e83(0x14)] = _0x231e83(0x29) + _0x231e83(0x2a), _0x4de36e[_0x231e83(0x11)] = 'address';
-var _0x2684cc = {};
-_0x2684cc[_0x231e83(0x17) + 'pe'] = 'bool', _0x2684cc['name'] = _0x231e83(0x3c) + _0x231e83(0x3d) + 's', _0x2684cc[_0x231e83(0x11)] = 'bool';
-var _0x13a065 = {};
-_0x13a065[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x13a065['name'] = '', _0x13a065[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x55a176 = {};
-_0x55a176['inputs'] = [_0x4de36e, _0x2684cc], _0x55a176[_0x231e83(0x14)] = _0x231e83(0x3e) + 'f', _0x55a176['outputs'] = [_0x13a065], _0x55a176[_0x231e83(0xe) + 'ility'] = _0x231e83(0x2f), _0x55a176['type'] = _0x231e83(0x2b);
-var _0x494bd0 = {};
-_0x494bd0[_0x231e83(0xd)] = [], _0x494bd0[_0x231e83(0x14)] = _0x231e83(0x3f), _0x494bd0[_0x231e83(0x2d)] = [], _0x494bd0[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x10), _0x494bd0['type'] = 'function';
-var _0x45d1ef = {};
-_0x45d1ef[_0x231e83(0x17) + 'pe'] = _0x231e83(0x40), _0x45d1ef[_0x231e83(0x14)] = _0x231e83(0x3c) + _0x231e83(0x3d) + 's', _0x45d1ef[_0x231e83(0x11)] = 'bool';
-var _0x2f2aa1 = {};
-_0x2f2aa1[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x2f2aa1[_0x231e83(0x14)] = '', _0x2f2aa1[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x2beb12 = {};
-_0x2beb12[_0x231e83(0xd)] = [_0x45d1ef], _0x2beb12[_0x231e83(0x14)] = _0x231e83(0x41) + 's', _0x2beb12[_0x231e83(0x2d)] = [_0x2f2aa1], _0x2beb12[_0x231e83(0xe) + 'ility'] = _0x231e83(0x2f), _0x2beb12[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x1938f1 = {};
-_0x1938f1[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x1938f1['name'] = '', _0x1938f1['type'] = 'uint256';
-var _0x3c69ab = {};
-_0x3c69ab[_0x231e83(0xd)] = [], _0x3c69ab[_0x231e83(0x14)] = _0x231e83(0x42), _0x3c69ab[_0x231e83(0x2d)] = [_0x1938f1], _0x3c69ab[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0x3c69ab[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x1f8ca0 = {};
-_0x1f8ca0[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x1f8ca0['name'] = '', _0x1f8ca0[_0x231e83(0x11)] = 'uint256';
-var _0x313179 = {};
-_0x313179['inputs'] = [], _0x313179[_0x231e83(0x14)] = 'myTokens', _0x313179[_0x231e83(0x2d)] = [_0x1f8ca0], _0x313179[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0x313179[_0x231e83(0x11)] = 'function';
-var _0xd5253f = {};
-_0xd5253f['internalTy' + 'pe'] = _0x231e83(0x18), _0xd5253f[_0x231e83(0x14)] = '', _0xd5253f['type'] = _0x231e83(0x18);
-var _0x45773c = {};
-_0x45773c[_0x231e83(0xd)] = [], _0x45773c['name'] = _0x231e83(0x43) + 'osits', _0x45773c[_0x231e83(0x2d)] = [_0xd5253f], _0x45773c['stateMutab' + _0x231e83(0xf)] = _0x231e83(0x2f), _0x45773c[_0x231e83(0x11)] = 'function';
-var _0x349b72 = {};
-_0x349b72[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x349b72[_0x231e83(0x14)] = '', _0x349b72[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x24e6d3 = {};
-_0x24e6d3[_0x231e83(0xd)] = [], _0x24e6d3['name'] = _0x231e83(0x44) + _0x231e83(0x45) + _0x231e83(0x46), _0x24e6d3[_0x231e83(0x2d)] = [_0x349b72], _0x24e6d3[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0x24e6d3['type'] = _0x231e83(0x2b);
-var _0x199564 = {};
-_0x199564[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x199564[_0x231e83(0x14)] = '', _0x199564[_0x231e83(0x11)] = 'uint256';
-var _0xc6af47 = {};
-_0xc6af47[_0x231e83(0xd)] = [], _0xc6af47[_0x231e83(0x14)] = _0x231e83(0x44) + _0x231e83(0x47), _0xc6af47[_0x231e83(0x2d)] = [_0x199564], _0xc6af47[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0xc6af47[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0xd488b8 = {};
-_0xd488b8[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0xd488b8[_0x231e83(0x14)] = '', _0xd488b8[_0x231e83(0x11)] = 'uint256';
-var _0x280a0e = {};
-_0x280a0e[_0x231e83(0xd)] = [], _0x280a0e[_0x231e83(0x14)] = _0x231e83(0x48) + _0x231e83(0x49), _0x280a0e[_0x231e83(0x2d)] = [_0xd488b8], _0x280a0e['stateMutab' + _0x231e83(0xf)] = _0x231e83(0x2f), _0x280a0e[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x221278 = {};
-_0x221278['internalTy' + 'pe'] = _0x231e83(0x4a), _0x221278[_0x231e83(0x14)] = '', _0x221278['type'] = 'string';
-var _0x18417b = {};
-_0x18417b[_0x231e83(0xd)] = [], _0x18417b['name'] = _0x231e83(0x14), _0x18417b[_0x231e83(0x2d)] = [_0x221278], _0x18417b['stateMutab' + _0x231e83(0xf)] = _0x231e83(0x2f), _0x18417b[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x23d83d = {};
-_0x23d83d[_0x231e83(0xd)] = [], _0x23d83d[_0x231e83(0x14)] = _0x231e83(0x4b), _0x23d83d['outputs'] = [], _0x23d83d[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x10), _0x23d83d[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0xe69299 = {};
-_0xe69299[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0xe69299['name'] = _0x231e83(0x4c) + _0x231e83(0x4d), _0xe69299[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x1372ef = {};
-_0x1372ef[_0x231e83(0xd)] = [_0xe69299], _0x1372ef[_0x231e83(0x14)] = _0x231e83(0x4e), _0x1372ef['outputs'] = [], _0x1372ef['stateMutab' + _0x231e83(0xf)] = _0x231e83(0x10), _0x1372ef['type'] = _0x231e83(0x2b);
-var _0x5bf2b4 = {};
-_0x5bf2b4['internalTy' + 'pe'] = 'uint256', _0x5bf2b4[_0x231e83(0x14)] = '', _0x5bf2b4[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x18753b = {};
-_0x18753b[_0x231e83(0xd)] = [], _0x18753b[_0x231e83(0x14)] = _0x231e83(0x4f), _0x18753b[_0x231e83(0x2d)] = [_0x5bf2b4], _0x18753b['stateMutab' + _0x231e83(0xf)] = 'view', _0x18753b['type'] = _0x231e83(0x2b);
-var _0x106088 = {};
-_0x106088['internalTy' + 'pe'] = 'address', _0x106088[_0x231e83(0x14)] = _0x231e83(0x50), _0x106088[_0x231e83(0x11)] = _0x231e83(0x13);
-var _0x33559e = {};
-_0x33559e[_0x231e83(0x17) + 'pe'] = 'uint256', _0x33559e[_0x231e83(0x14)] = '', _0x33559e['type'] = _0x231e83(0x18);
-var _0x3c2829 = {};
-_0x3c2829[_0x231e83(0xd)] = [_0x106088], _0x3c2829[_0x231e83(0x14)] = _0x231e83(0x51), _0x3c2829['outputs'] = [_0x33559e], _0x3c2829[_0x231e83(0xe) + _0x231e83(0xf)] = 'view', _0x3c2829['type'] = _0x231e83(0x2b);
-var _0x2173d2 = {};
-_0x2173d2[_0x231e83(0x17) + 'pe'] = _0x231e83(0x4a), _0x2173d2[_0x231e83(0x14)] = '', _0x2173d2['type'] = _0x231e83(0x4a);
-var _0x5f36d0 = {};
-_0x5f36d0[_0x231e83(0xd)] = [], _0x5f36d0[_0x231e83(0x14)] = _0x231e83(0x52), _0x5f36d0[_0x231e83(0x2d)] = [_0x2173d2], _0x5f36d0[_0x231e83(0xe) + _0x231e83(0xf)] = 'view', _0x5f36d0['type'] = _0x231e83(0x2b);
-var _0x229a9d = {};
-_0x229a9d[_0x231e83(0x17) + 'pe'] = 'uint256', _0x229a9d['name'] = '', _0x229a9d[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x51fcf1 = {};
-_0x51fcf1['inputs'] = [], _0x51fcf1[_0x231e83(0x14)] = 'totalBNBBa' + _0x231e83(0x53), _0x51fcf1[_0x231e83(0x2d)] = [_0x229a9d], _0x51fcf1['stateMutab' + _0x231e83(0xf)] = _0x231e83(0x2f), _0x51fcf1[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x2a053a = {};
-_0x2a053a[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x2a053a[_0x231e83(0x14)] = _0x231e83(0x50), _0x2a053a[_0x231e83(0x11)] = _0x231e83(0x13);
-var _0x2f1123 = {};
-_0x2f1123[_0x231e83(0x17) + 'pe'] = 'uint256', _0x2f1123['name'] = '', _0x2f1123[_0x231e83(0x11)] = 'uint256';
-var _0x24ca2f = {};
-_0x24ca2f[_0x231e83(0xd)] = [_0x2a053a], _0x24ca2f[_0x231e83(0x14)] = _0x231e83(0x54) + 'itsOf', _0x24ca2f['outputs'] = [_0x2f1123], _0x24ca2f[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0x24ca2f[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x851fd4 = {};
-_0x851fd4[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x851fd4[_0x231e83(0x14)] = '_user', _0x851fd4[_0x231e83(0x11)] = _0x231e83(0x13);
-var _0x21b738 = {};
-_0x21b738[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x21b738['name'] = '', _0x21b738[_0x231e83(0x11)] = 'uint256';
-var _0x375747 = {};
-_0x375747['inputs'] = [_0x851fd4], _0x375747['name'] = _0x231e83(0x55) + 'ralEarning' + _0x231e83(0x56), _0x375747[_0x231e83(0x2d)] = [_0x21b738], _0x375747[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0x375747[_0x231e83(0x11)] = 'function';
-var _0x208945 = {};
-_0x208945[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x208945[_0x231e83(0x14)] = _0x231e83(0x50), _0x208945[_0x231e83(0x11)] = _0x231e83(0x13);
-var _0x1aeef6 = {};
-_0x1aeef6[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x1aeef6['name'] = '', _0x1aeef6[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x57ddb9 = {};
-_0x57ddb9[_0x231e83(0xd)] = [_0x208945], _0x57ddb9[_0x231e83(0x14)] = _0x231e83(0x55) + _0x231e83(0x57), _0x57ddb9[_0x231e83(0x2d)] = [_0x1aeef6], _0x57ddb9[_0x231e83(0xe) + 'ility'] = 'view', _0x57ddb9[_0x231e83(0x11)] = 'function';
-var _0x3afb0f = {};
-_0x3afb0f[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x3afb0f['name'] = '', _0x3afb0f[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x16bd77 = {};
-_0x16bd77[_0x231e83(0xd)] = [], _0x16bd77[_0x231e83(0x14)] = _0x231e83(0x58) + 'y', _0x16bd77['outputs'] = [_0x3afb0f], _0x16bd77[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2f), _0x16bd77['type'] = 'function';
-var _0x4f1cb1 = {};
-_0x4f1cb1[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x4f1cb1[_0x231e83(0x14)] = _0x231e83(0x50), _0x4f1cb1['type'] = _0x231e83(0x13);
-var _0xd68a3d = {};
-_0xd68a3d['internalTy' + 'pe'] = _0x231e83(0x18), _0xd68a3d[_0x231e83(0x14)] = '', _0xd68a3d[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0x47b032 = {};
-_0x47b032[_0x231e83(0xd)] = [_0x4f1cb1], _0x47b032['name'] = 'totalWithd' + 'rawalsOf', _0x47b032[_0x231e83(0x2d)] = [_0xd68a3d], _0x47b032[_0x231e83(0xe) + _0x231e83(0xf)] = 'view', _0x47b032[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x269771 = {};
-_0x269771[_0x231e83(0x17) + 'pe'] = _0x231e83(0x13), _0x269771[_0x231e83(0x14)] = '_toAddress', _0x269771[_0x231e83(0x11)] = _0x231e83(0x13);
-var _0x4c1ae8 = {};
-_0x4c1ae8[_0x231e83(0x17) + 'pe'] = _0x231e83(0x18), _0x4c1ae8[_0x231e83(0x14)] = _0x231e83(0x4c) + _0x231e83(0x4d), _0x4c1ae8[_0x231e83(0x11)] = _0x231e83(0x18);
-var _0xa41176 = {};
-_0xa41176[_0x231e83(0x17) + 'pe'] = _0x231e83(0x40), _0xa41176[_0x231e83(0x14)] = '', _0xa41176[_0x231e83(0x11)] = _0x231e83(0x40);
-var _0x40ff48 = {};
-_0x40ff48[_0x231e83(0xd)] = [_0x269771, _0x4c1ae8], _0x40ff48[_0x231e83(0x14)] = _0x231e83(0x59), _0x40ff48[_0x231e83(0x2d)] = [_0xa41176], _0x40ff48[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x10), _0x40ff48[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x347316 = {};
-_0x347316[_0x231e83(0xd)] = [], _0x347316[_0x231e83(0x14)] = _0x231e83(0x5a), _0x347316[_0x231e83(0x2d)] = [], _0x347316[_0x231e83(0xe) + 'ility'] = _0x231e83(0x10), _0x347316[_0x231e83(0x11)] = _0x231e83(0x2b);
-var _0x1c9db6 = {};
-_0x1c9db6[_0x231e83(0xe) + _0x231e83(0xf)] = _0x231e83(0x2e), _0x1c9db6['type'] = _0x231e83(0x5b);
-var abi = [_0x2139f6, _0x42c775, _0x370cb1, _0x48cf54, _0x48d5a2, _0x2ae5e0, _0x2df63a, _0x49a774, _0xda1861, _0xb203e, _0x3b23b6, _0x56a9d8, _0x1dcd08, _0x55a176, _0x494bd0, _0x2beb12, _0x3c69ab, _0x313179, _0x45773c, _0x24e6d3, _0xc6af47, _0x280a0e, _0x18417b, _0x23d83d, _0x1372ef, _0x18753b, _0x3c2829, _0x5f36d0, _0x51fcf1, _0x24ca2f, _0x375747, _0x57ddb9, _0x16bd77, _0x47b032, _0x40ff48, _0x347316, _0x1c9db6];
-!String[_0x231e83(0x5c)][_0x231e83(0x5d)] && (String[_0x231e83(0x5c)][_0x231e83(0x5d)] = function () {
-    var _0x43af68 = _0x12dd,
-        _0xefed52 = arguments;
-    return this[_0x43af68(0x5e)](/{(\d+)}/g, function (_0x54892b, _0x5f2a0b) {
-        var _0x408caa = _0x12dd;
-        return typeof _0xefed52[_0x5f2a0b] !== _0x408caa(0xb) ? _0xefed52[_0x5f2a0b] : _0x54892b;
-    });
-});
-const numberWithCommas = _0x4d8a68 => {
-    var _0x38302e = _0x12dd;
-    return _0x4d8a68[_0x38302e(0x5f)]()[_0x38302e(0x5e)](/\B(?=(\d{3})+(?!\d))/g, ',');
-};
+// CONSTANTS
+var contractAddress = '0x0c22C33eaEFC961Ed529a6Af4654B6c2f51c12D3'; // Mainnet
+// var contractAddress = '0x1b173752a08293baCf1B13f2c3201715e45483aD'; // Testnet
 
-function copyToClipboard(_0xbcb98c) {
-    var _0x58721c = _0x12dd;
-    if (window[_0x58721c(0x60) + 'ata'] && window[_0x58721c(0x60) + _0x58721c(0x61)]['setData']) return clipboardData[_0x58721c(0x62)]('Text', _0xbcb98c);
-    else {
-        if (document[_0x58721c(0x63) + _0x58721c(0x64) + 'd'] && document[_0x58721c(0x63) + _0x58721c(0x64) + 'd'](_0x58721c(0x65))) {
-            var _0x556e63 = document[_0x58721c(0x66) + _0x58721c(0x67)]('textarea');
-            _0x556e63[_0x58721c(0x68) + 't'] = _0xbcb98c, _0x556e63['style']['position'] = _0x58721c(0x69), document[_0x58721c(0x6a)][_0x58721c(0x6b) + 'd'](_0x556e63), _0x556e63[_0x58721c(0x6c)]();
-            try {
-                return document[_0x58721c(0x6d) + 'd'](_0x58721c(0x65));
-            } catch (_0x5c2981) {
-                return console[_0x58721c(0x6e)](_0x58721c(0x6f) + 'ipboard\x20fa' + _0x58721c(0x70), _0x5c2981), ![];
-            } finally {
-                document[_0x58721c(0x6a)][_0x58721c(0x71) + 'd'](_0x556e63);
-            }
+// GLOBALS
+var web3Mode = null;
+var walletMode = 'metamask';
+var currentAddress = null;
+var dividendValue = 0;
+var contract = null;
+var myBalance = 0;
+
+var buyPrice = 0;
+var globalBuyPrice = 0;
+var sellPrice = 0;
+var bnbPrice = 0;
+var currency = (typeof default_currency === 'undefined') ? 'USD' : default_currency;
+var bnbPriceTimer = null;
+var dataTimer = null;
+var infoTimer = null;
+
+var abi = [{
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "internalType": "address",
+        "name": "from",
+        "type": "address"
+    }, {
+        "indexed": true,
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+    }, {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokens",
+        "type": "uint256"
+    }],
+    "name": "Transfer",
+    "type": "event"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "internalType": "address",
+        "name": "customerAddress",
+        "type": "address"
+    }, {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "bnbReinvested",
+        "type": "uint256"
+    }, {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokensMinted",
+        "type": "uint256"
+    }],
+    "name": "onReinvestment",
+    "type": "event"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "internalType": "address",
+        "name": "customerAddress",
+        "type": "address"
+    }, {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "incomingBNB",
+        "type": "uint256"
+    }, {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokensMinted",
+        "type": "uint256"
+    }, {
+        "indexed": true,
+        "internalType": "address",
+        "name": "referredBy",
+        "type": "address"
+    }],
+    "name": "onTokenPurchase",
+    "type": "event"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "internalType": "address",
+        "name": "customerAddress",
+        "type": "address"
+    }, {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokensBurned",
+        "type": "uint256"
+    }, {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "bnbEarned",
+        "type": "uint256"
+    }],
+    "name": "onTokenSell",
+    "type": "event"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "internalType": "address",
+        "name": "customerAddress",
+        "type": "address"
+    }, {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "bnbWithdrawn",
+        "type": "uint256"
+    }],
+    "name": "onWithdraw",
+    "type": "event"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_customerAddress",
+        "type": "address"
+    }],
+    "name": "balanceOf",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_referredBy",
+        "type": "address"
+    }],
+    "name": "buy",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "payable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "buyPrice",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_tokensToSell",
+        "type": "uint256"
+    }],
+    "name": "calculateBNBReceived",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_bnbToSpend",
+        "type": "uint256"
+    }],
+    "name": "calculateTokensReceived",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "decimals",
+    "outputs": [{
+        "internalType": "uint8",
+        "name": "",
+        "type": "uint8"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "deployer",
+    "outputs": [{
+        "internalType": "address payable",
+        "name": "",
+        "type": "address"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_customerAddress",
+        "type": "address"
+    }, {
+        "internalType": "bool",
+        "name": "_includeReferralBonus",
+        "type": "bool"
+    }],
+    "name": "dividendsOf",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "exit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "bool",
+        "name": "_includeReferralBonus",
+        "type": "bool"
+    }],
+    "name": "myDividends",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "myStatus",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "myTokens",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "myTotalDeposits",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "myTotalReferralEarnings",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "myTotalReferrals",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "myTotalWithdrawals",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "name",
+    "outputs": [{
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "reinvest",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "uint256",
+        "name": "_amountOfTokens",
+        "type": "uint256"
+    }],
+    "name": "sell",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "sellPrice",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+    }],
+    "name": "statusOf",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "symbol",
+    "outputs": [{
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "totalBNBBalance",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+    }],
+    "name": "totalDepositsOf",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+    }],
+    "name": "totalReferralEarningsOf",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+    }],
+    "name": "totalReferralsOf",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+    }],
+    "name": "totalWithdrawalsOf",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [{
+        "internalType": "address",
+        "name": "_toAddress",
+        "type": "address"
+    }, {
+        "internalType": "uint256",
+        "name": "_amountOfTokens",
+        "type": "uint256"
+    }],
+    "name": "transfer",
+    "outputs": [{
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+    }],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "name": "withdraw",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "stateMutability": "payable",
+    "type": "receive"
+}];
+
+// UTILITY FUNCTIONS
+if (!String.prototype.format) {
+    String.prototype.format = function () {
+        var args = arguments
+        return this.replace(/{(\d+)}/g, function (match, number) {
+            return typeof args[number] !== 'undefined' ? args[number] : match
+        })
+    }
+}
+
+const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function copyToClipboard(text) {
+    if (window.clipboardData && window.clipboardData.setData) {
+        // IE specific code path to prevent textarea being shown while dialog is visible.
+        return clipboardData.setData('Text', text)
+
+    } else if (document.queryCommandSupported && document.queryCommandSupported('copy')) {
+        var textarea = document.createElement('textarea')
+        textarea.textContent = text
+        textarea.style.position = 'fixed' // Prevent scrolling to bottom of page in MS Edge.
+        document.body.appendChild(textarea)
+        textarea.select()
+        try {
+            return document.execCommand('copy') // Security exception may be thrown by some browsers.
+        } catch (ex) {
+            console.warn('Copy to clipboard failed.', ex)
+            return false
+        } finally {
+            document.body.removeChild(textarea)
         }
     }
 }
 
-function updateEthPrice() {
-    var _0x380590 = _0x12dd;
-    clearTimeout(ethPriceTimer), currency === _0x380590(0x72) ? (ethPrice = 0x1 / (sellPrice + (buyPrice - sellPrice) / 0x2), ethPriceTimer = setTimeout(updateEthPrice, 0x2710)) : $[_0x380590(0x73)](_0x380590(0x74) + _0x380590(0x75) + _0x380590(0x76) + _0x380590(0x77) + 'rice?fsym=' + _0x380590(0x78) + 'BNB,USD,' + currency, function (_0x5570f7) {
-        var _0x33ffe3 = _0x12dd,
-            _0x558219 = _0x5570f7['BNB'],
-            _0x47ac0f = _0x5570f7[_0x33ffe3(0xc)];
-        ethPrice = parseFloat(_0x558219), usdPrice = parseFloat(_0x47ac0f), ethPriceTimer = setTimeout(updateEthPrice, 0x2710);
-    });
+function updateBNBPrice() {
+    clearTimeout(bnbPriceTimer);
+    if (currency === 'B1VS') {
+        bnbPrice = 1 / (sellPrice + ((buyPrice - sellPrice) / 2));
+        bnbPriceTimer = setTimeout(updateBNBPrice, 10000);
+    } else {
+        $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=binancecoin&vs_currencies=' + currency, function (result) {
+
+            for (var key in result.binancecoin) {
+                var bnb = result.binancecoin[key];
+            }
+
+            bnbPrice = parseFloat(bnb);
+            $('.bnbPrice').text(bnbPrice);
+
+            bnbPriceTimer = setTimeout(updateBNBPrice, 10000);
+        });
+    }
 }
 
 function getPriceFloorInfo() {
-    var _0xcd75f9 = _0x12dd;
-    pricefloor[_0xcd75f9(0x79) + _0xcd75f9(0x7a)][_0xcd75f9(0x7b)](function (_0x38b70a, _0xc14a5b) {
-        var _0x1e769e = _0x12dd;
-        tokens = parseFloat(web3[_0x1e769e(0x7c)](_0xc14a5b[_0x1e769e(0x7d)]()))['toFixed'](0x1), $('#pricefloo' + 'rTokens')['html'](numberWithCommas(tokens));
-    }), pricefloor[_0xcd75f9(0x79) + _0xcd75f9(0x7e)][_0xcd75f9(0x7b)](function (_0x213f52, _0x575709) {
-        var _0x463d3b = _0x12dd;
-        dividends = parseFloat(web3[_0x463d3b(0x7c)](_0x575709[_0x463d3b(0x7d)]()))[_0x463d3b(0x7f)](0x4), $('#pricefloo' + 'rDivs')[_0x463d3b(0x80)](dividends);
+    pricefloor.pricefloorBalance.call(function (err, result) {
+        tokens = parseFloat(web3.fromWei(result.toNumber())).toFixed(1)
+        $("#pricefloorTokens").html(numberWithCommas(tokens))
+    });
+
+    pricefloor.pricefloorDividends.call(function (err, result) {
+        dividends = parseFloat(web3.fromWei(result.toNumber())).toFixed(4)
+        $("#pricefloorDivs").html(dividends)
     });
 }
 
-function convertEthToWei(_0x36f968) {
-    return 0xde0b6b3a7640000 * _0x36f968;
+function convertEthToWei(e) {
+    return 1e18 * e
 }
 
-function convertWeiToEth(_0x61fbe9) {
-    return _0x61fbe9 / 0xde0b6b3a7640000;
+function convertWeiToEth(e) {
+    return e / 1e18
 }
-window[_0x231e83(0x81) + _0x231e83(0x82)](_0x231e83(0x83), async () => {
-    var _0x5be5c5 = _0x12dd;
-    if (window[_0x5be5c5(0x84)]) {
-        window[_0x5be5c5(0x85)] = new Web3(ethereum);
+
+window.addEventListener('load', async () => {
+    // Modern dapp browsers...
+    if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
         try {
-            await ethereum[_0x5be5c5(0x86)]();
-        } catch (_0x58a137) {}
-    } else window['web3'] ? window[_0x5be5c5(0x85)] = new Web3(web3[_0x5be5c5(0x87) + _0x5be5c5(0x88)]) : console['log'](_0x5be5c5(0x89) + _0x5be5c5(0x8a) + _0x5be5c5(0x8b) + _0x5be5c5(0x8c) + _0x5be5c5(0x8d) + '\x20trying\x20Me' + 'taMask!');
+            // Request account access if needed
+            await ethereum.enable();
+        } catch (error) {
+
+        }
+    } else if (window.web3) {
+        // Legacy dapp browsers...
+        window.web3 = new Web3(web3.currentProvider);
+    } else {
+        // Non-dapp browsers...
+        console.log('You need MetaMask or a Dapp Browser capable of connecting to Binance Smart Chain!');
+    }
 });
 
 function detectWeb3() {
-    var _0x592d52 = _0x12dd;
-    if (typeof web3 !== 'undefined') web3js = new Web3(web3[_0x592d52(0x87) + _0x592d52(0x88)]), web3Mode = _0x592d52(0x8e), currentAddress = web3js[_0x592d52(0x8f)][_0x592d52(0x90)][0x0];
-    else {}
-    ref = localStorage['getItem']('ref');
-    ref == null ? (console[_0x592d52(0x91)](_0x592d52(0x92) + 'as\x20empty,\x20' + _0x592d52(0x93) + 'ow\x20set\x20to\x20' + _0x592d52(0x94) + _0x592d52(0x95) + '.'), ref = '0xf2C57908' + _0x592d52(0x96) + _0x592d52(0x97) + _0x592d52(0x98) + '8a') : (ref = ref, console[_0x592d52(0x91)](_0x592d52(0x99) + _0x592d52(0x9a) + ref + ('\x20is\x20gettin' + _0x592d52(0x9b) + _0x592d52(0x9c))));
-    var _0x172ef8 = web3js[_0x592d52(0x8f)][_0x592d52(0x9d)](abi);
-    contract = _0x172ef8['at'](contractAddress), updateData(), attachEvents(), updateTokenInfo();
+    if (typeof web3 !== 'undefined') {
+        web3js = new Web3(web3.currentProvider)
+        web3Mode = 'metamask'
+        currentAddress = web3js.eth.accounts[0]
+    } else {
+
+    }
+
+    ref = localStorage.getItem("ref")
+    if (ref == null) {
+        console.log('Referrer was empty, so it is now set to the creators address.');
+        ref = "0xf2C579082fE10d57331d0Cd66843C4D6777eA48a";
+    } else {
+        ref = ref;
+        console.log('Referrer set. ' + ref + ' is getting a referral bonus.');
+    }
+
+    var contractClass = web3js.eth.contract(abi)
+    contract = contractClass.at(contractAddress)
+
+    updateData()
+    attachEvents()
+    updateTokenInfo()
 }
-window[_0x231e83(0x81) + 'stener'](_0x231e83(0x83), function () {
-    var _0x33472d = _0x12dd;
-    setTimeout(detectWeb3, 0x1f4);
 
-    function _0x1d1551(_0x2a6ce, _0x310814, _0x24ccb3, _0xa6fcb5) {
-        var _0x12a0eb = _0x12dd;
-        web3js[_0x12a0eb(0x8f)][_0x12a0eb(0x9e) + 'tionCount'](currentAddress, function (_0x21f267, _0x31d20d) {
-            var _0x49d671 = _0x12dd;
-            if (_0x21f267) throw _0x21f267;
-            web3js[_0x49d671(0x8f)][_0x49d671(0x9f) + 'e'](function (_0x1e117a, _0x218c91) {
-                var _0x5b05e5 = _0x12dd;
-                if (_0x1e117a) throw _0x1e117a;
-                _0x218c91 = Math[_0x5b05e5(0xa0)](_0x218c91 / 0xa, 0x3b9aca00);
-                var _0x7ed606 = {};
-                _0x7ed606['from'] = currentAddress, _0x7ed606['to'] = _0x2a6ce, _0x7ed606[_0x5b05e5(0xa1)] = '0x' + _0xa6fcb5[_0x5b05e5(0x5f)](0x10), _0x7ed606[_0x5b05e5(0xa2)] = '0x' + _0x218c91['toString'](0x10), _0x7ed606[_0x5b05e5(0xa3)] = '0x' + 0x186a0['toString'](0x10), _0x7ed606[_0x5b05e5(0xa4)] = _0x31d20d;
-                var _0x20d1d3 = _0x7ed606;
-            });
-        });
+window.addEventListener('load', function () {
+    setTimeout(detectWeb3, 500)
+
+    function call(address, method, params, amount) {
+        web3js.eth.getTransactionCount(currentAddress, function (err, nonce) {
+            if (err) throw err
+
+            web3js.eth.getGasPrice(function (err, gasPrice) {
+                if (err) throw err
+
+                // Median network gas price is too high most the time, divide by 10 or minimum 1 gwei
+                gasPrice = Math.max(gasPrice / 10, 1000000000)
+
+                var tx = {
+                    'from': currentAddress,
+                    'to': address,
+                    'value': '0x' + amount.toString(16),
+                    'gasPrice': '0x' + (gasPrice).toString(16),
+                    'gasLimit': '0x' + (100000).toString(16),
+                    'nonce': nonce,
+                }
+            })
+        })
     }
 
-    function _0x3cb985(_0x125333) {
-        var _0x528526 = _0x12dd,
-            _0x2da022 = document[_0x528526(0xa5)],
-            _0x59ab44 = _0x125333 + '=',
-            _0x24a210 = _0x2da022[_0x528526(0xa6)](';\x20' + _0x59ab44);
-        if (_0x24a210 == -0x1) {
-            _0x24a210 = _0x2da022['indexOf'](_0x59ab44);
-            if (_0x24a210 != 0x0) return null;
+    function getCookie(name) {
+        var dc = document.cookie;
+        var prefix = name + "=";
+        var begin = dc.indexOf("; " + prefix);
+
+        if (begin == -1) {
+            begin = dc.indexOf(prefix);
+            if (begin != 0) return null;
         } else {
-            _0x24a210 += 0x2;
-            var _0x578ea5 = document[_0x528526(0xa5)][_0x528526(0xa6)](';', _0x24a210);
-            _0x578ea5 == -0x1 && (_0x578ea5 = _0x2da022[_0x528526(0xa7)]);
+            begin += 2;
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1) {
+                end = dc.length;
+            }
         }
-        return decodeURI(_0x2da022[_0x528526(0xa8)](_0x24a210 + _0x59ab44['length'], _0x578ea5));
+
+        return decodeURI(dc.substring(begin + prefix.length, end));
     }
 
-    function _0x3418f8(_0xb6479c, _0x53a55d) {
-        var _0x105abe = _0x12dd;
-        if (walletMode === _0x105abe(0x8e)) {
-            var _0x23c72b = convertEthToWei(_0x53a55d),
-                _0x4c5639 = 0x249f0,
-                _0x37d461 = {};
-            _0x37d461['value'] = _0x23c72b, contract['buy'](ref, _0x37d461, function (_0x4183f1, _0x3a6eb8) {
-                var _0x42fb48 = _0x12dd;
-                console[_0x42fb48(0x91)](_0x4183f1, _0x3a6eb8);
-            });
-        } else walletMode === 'web' && _0x1d1551(_0xb6479c, _0x105abe(0x2c), [], convertEthToWei(_0x53a55d));
+    function fund(address, amount) {
+        if (walletMode === 'metamask') {
+            var etcwei = convertEthToWei(amount);
+            var gasvalue = 150000;
+            contract.buy(ref, {
+                value: etcwei
+            }, function (e, r) {
+                console.log(e, r)
+            })
+        } else if (walletMode === 'web') {
+            call(address, 'buy', [], convertEthToWei(amount))
+        }
     }
 
-    function _0x3e2c06(_0x485e43) {
-        var _0x46c00a = _0x12dd;
-        if (walletMode === 'metamask') contract[_0x46c00a(0x4e)](convertEthToWei(_0x485e43), function (_0x515b1f, _0x4349ab) {
-            var _0x36ddcd = _0x12dd;
-            console[_0x36ddcd(0x91)](_0x515b1f, _0x4349ab);
-        });
-        else walletMode === _0x46c00a(0xa9) && _0x1d1551(contractAddress, _0x46c00a(0x4e), [convertEthToWei(_0x485e43)], 0x0);
+    function sell(amount) {
+        if (walletMode === 'metamask') {
+            contract.sell(convertEthToWei(amount), function (e, r) {
+                console.log(e, r)
+            })
+        } else if (walletMode === 'web') {
+            call(contractAddress, 'sell', [convertEthToWei(amount)], 0)
+        }
     }
 
-    function _0x2ac68a() {
-        var _0x1c832c = _0x12dd;
-        if (walletMode === 'metamask') contract[_0x1c832c(0x4b)](function (_0x369e6d, _0x3be4a6) {
-            var _0xc6c42a = _0x12dd;
-            console[_0xc6c42a(0x91)](_0x369e6d, _0x3be4a6);
-        });
-        else walletMode === _0x1c832c(0xa9) && _0x1d1551(contractAddress, _0x1c832c(0x4b), [], 0x0);
+    function reinvest() {
+        if (walletMode === 'metamask') {
+            contract.reinvest(function (e, r) {
+                console.log(e, r)
+            })
+        } else if (walletMode === 'web') {
+            call(contractAddress, 'reinvest', [], 0)
+        }
     }
 
-    function _0x293432() {
-        var _0x38957d = _0x12dd;
-        if (walletMode === _0x38957d(0x8e)) contract['withdraw'](function (_0x960f2a, _0x192d87) {
-            var _0x13d13a = _0x12dd;
-            console[_0x13d13a(0x91)](_0x960f2a, _0x192d87);
-        });
-        else walletMode === _0x38957d(0xa9) && _0x1d1551(contractAddress, _0x38957d(0x5a), [], 0x0);
+    function withdraw() {
+        if (walletMode === 'metamask') {
+            contract.withdraw(function (e, r) {
+                console.log(e, r)
+            })
+        } else if (walletMode === 'web') {
+            call(contractAddress, 'withdraw', [], 0)
+        }
     }
-    $('#buy-token' + 's')['click'](function () {
-        var _0x1f46aa = _0x12dd;
-        let _0x41e215 = $(_0x1f46aa(0xaa) + _0x1f46aa(0xab))['val']()['trim']();
-        _0x3418f8(contractAddress, _0x41e215);
-    }), $(_0x33472d(0xac) + _0x33472d(0xad))['click'](function () {
-        var _0x342e8f = _0x12dd;
-        let _0x58998e = $('#transfer-' + _0x342e8f(0x13))[_0x342e8f(0xae)](),
-            _0x3420bb = $(_0x342e8f(0xac) + 'tokens')[_0x342e8f(0xae)]();
-        console[_0x342e8f(0x91)](_0x342e8f(0xaf));
-        if (!web3js[_0x342e8f(0xb0)](_0x58998e)) return;
-        if (!parseFloat(_0x3420bb)) return;
-        let _0x53d89a = web3js[_0x342e8f(0xb1) + 'r'](_0x3420bb * 0xde0b6b3a7640000);
-        _0x1c1fae(_0x53d89a, _0x58998e);
+
+    // Buy token click handler
+
+    $('#buy-tokens').click(function () {
+        let amount = $('#purchase-amount').val().trim();
+        fund(contractAddress, amount);
     });
 
-    function _0x1c1fae(_0xdea743, _0x33beb2) {
-        var _0x50c14f = _0x12dd;
-        walletMode === _0x50c14f(0x8e) ? contract['myTokens'](function (_0xaad05e, _0x4dda22) {
-            var _0x504f68 = _0x12dd;
-            parseFloat(_0xdea743) <= parseFloat(_0x4dda22) && contract[_0x504f68(0x59)](_0x33beb2, _0xdea743, function (_0x497123, _0x50b506) {
-                var _0x32da93 = _0x12dd;
-                _0x497123 && (alertify[_0x32da93(0xb2)](_0x32da93(0xb3) + _0x32da93(0xb4) + _0x32da93(0xb5) + _0x32da93(0xb6) + _0x32da93(0xb7)), console['log'](_0x32da93(0xb8) + _0x32da93(0xb9), _0x497123));
+    // Transfer handler
+    $('#transfer-tokens-btn').click(function () {
+        let address = $('#transfer-address').val();
+        let amount = $('#transfer-tokens').val();
+        if (!web3js.isAddress(address)) {
+            alertify.error("Invalid Recipient Address!");
+            return;
+        }
+        
+        if (!parseFloat(amount)) {
+            alertify.error("Invalid B1VS Amount to Transfer!");
+            return
+        }
+        let amountConverted = web3js.toBigNumber(amount * 1000000000000000000);
+        transferTokens(amountConverted, address);
+    });
+
+    function transferTokens(amount, address) {
+        if (walletMode === 'metamask') {
+            contract.myTokens(function (err, myTokens) {
+                if (parseFloat(amount) <= parseFloat(myTokens)) {
+                    contract.transfer(address, amount, function (err, result) {
+                        if (err) {
+                            alertify.error('Uh-Oh! Something went wrong... Try again later');
+                            console.log('An error occured', err);
+                        }
+                    });
+                }
             });
-        }) : alert[_0x50c14f(0x91)](_0x50c14f(0xba) + _0x50c14f(0xbb) + _0x50c14f(0xbc) + _0x50c14f(0xbd) + _0x50c14f(0xbe) + _0x50c14f(0xbf) + '\x20Wallet.');
+        } else {
+            alert.log('Transfer functionality supported only with Metamask or Trust Wallet.');
+        }
+
     }
-    $(_0x33472d(0xc0) + _0x33472d(0xc1))[_0x33472d(0xc2)](function () {
-        var _0x38cf67 = _0x12dd;
-        _0x3e2c06($('#sell-toke' + _0x38cf67(0xc3))[_0x38cf67(0xae)]());
-    }), $('#reinvest-' + _0x33472d(0xc4))[_0x33472d(0xc2)](function () {
-        _0x2ac68a();
-    }), $(_0x33472d(0xc5) + _0x33472d(0xc4))[_0x33472d(0xc2)](function () {
-        _0x293432();
-    }), $(_0x33472d(0xc0) + _0x33472d(0xc6))[_0x33472d(0xc2)](function () {
-        var _0x182ee4 = _0x12dd;
-        contract[_0x182ee4(0x4e)](function (_0x452a47, _0x941642) {
-            var _0x55b4a4 = _0x12dd;
-            console[_0x55b4a4(0x91)](_0x452a47, _0x941642);
+
+    $('#sell-tokens-btn').click(function () {
+        sell($("#sell-tokens-amount").val())
+    });
+    
+    $('#reinvest-btn').click(function () {
+        reinvest();
+    });
+    
+    $('#withdraw-btn').click(function () {
+        withdraw();
+    });
+    
+    $('#sell-tokens-btn-m').click(function () {
+        contract.sell(function (e, r) {
+            console.log(e, r);
         });
-    }), $(_0x33472d(0xc7) + _0x33472d(0xc8))[_0x33472d(0xc2)](function () {
-        var _0x4811bb = _0x12dd;
-        contract[_0x4811bb(0x4b)](function (_0x53245b, _0x11e901) {
-            console['log'](_0x53245b, _0x11e901);
+    });
+    
+    $('#reinvest-btn-m').click(function () {
+        contract.reinvest(function (e, r) {
+            console.log(e, r);
         });
-    }), $('#withdraw-' + 'btn-m')['click'](function () {
-        var _0x3a2ec5 = _0x12dd;
-        contract[_0x3a2ec5(0x5a)](function (_0x55b496, _0x31182e) {
-            var _0x31fe8d = _0x12dd;
-            console[_0x31fe8d(0x91)](_0x55b496, _0x31182e);
+    });
+    
+    $('#withdraw-btn-m').click(function () {
+        contract.withdraw(function (e, r) {
+            console.log(e, r);
         });
-    }), $('#currency')[_0x33472d(0xae)](currency), $('#currency')[_0x33472d(0xc9)](function () {
-        var _0x5807c4 = _0x12dd;
-        currency = $(this)[_0x5807c4(0xae)](), updateEthPrice();
-    }), updateEthPrice(), $(_0x33472d(0xaa) + 'amount')[_0x33472d(0xca)](_0x33472d(0xcb) + _0x33472d(0xcc), function (_0x22ab6c) {
-        var _0x1efe73 = _0x12dd,
-            _0x30c311 = $(_0x1efe73(0xaa) + _0x1efe73(0xab))[_0x1efe73(0xae)](),
-            _0x447f56 = _0x30c311 / globalBuyPrice;
-        $(_0x1efe73(0xcd) + _0x1efe73(0xce))[_0x1efe73(0xcf)](_0x1efe73(0xd0) + (_0x30c311 == 0x0 ? 0x0 : _0x30c311) + ('\x20BNB\x20you\x20c' + _0x1efe73(0xd1)) + _0x447f56[_0x1efe73(0x7f)](0x3) + '\x20B1VS');
-    }), $(_0x33472d(0xd2) + _0x33472d(0xd3))[_0x33472d(0xc2)](function (_0x15b0a2) {
-        var _0x2ed99e = _0x12dd;
-        _0x15b0a2[_0x2ed99e(0xd4) + _0x2ed99e(0xd5)](), copyToClipboard(_0x2ed99e(0xd6) + _0x2ed99e(0xd7) + 'd.net/dash' + _0x2ed99e(0xd8) + _0x2ed99e(0xd9) + currentAddress), alertify[_0x2ed99e(0xda)](_0x2ed99e(0xdb) + _0x2ed99e(0xdc) + '!');
+    });
+    
+    $('#currency').val(currency);
+
+    $('#currency').change(function () {
+        currency = $(this).val();
+        updateBNBPrice();
+    });
+
+    updateBNBPrice();
+
+    $('#purchase-amount').bind("keypress keyup click", function (e) {
+        var number = $('#purchase-amount').val();
+        var numTokens = number / globalBuyPrice;
+        $('.number-of-tokens').text("With " + (number == 0 ? 0 : number) + " BNB you can buy " + numTokens.toFixed(3) + " B1VS");
+    });
+
+    $('#copy-ref-link').click(function (e) {
+        e.preventDefault();
+        copyToClipboard('http://functionisland.net/dashboard.html?ref=' + currentAddress);
+        alertify.success('Copied Referral Link!');
     });
 });
 
 function updateData() {
-    var _0x6e213d = _0x12dd;
     clearTimeout(dataTimer);
-    var _0x51c2cb = ![];
-    if (walletMode === 'metamask') _0x51c2cb = typeof web3js[_0x6e213d(0x8f)][_0x6e213d(0xdd) + _0x6e213d(0xde)] !== _0x6e213d(0xb) && web3js[_0x6e213d(0x8f)][_0x6e213d(0xdd) + _0x6e213d(0xde)] !== null, currentAddress = web3js[_0x6e213d(0x8f)]['defaultAcc' + _0x6e213d(0xde)];
-    else walletMode === 'web' && (_0x51c2cb = currentAddress !== null);
-    if (_0x51c2cb) contract['balanceOf'](currentAddress, function (_0x540f85, _0x1c8f9d) {
-        var _0x5bdd55 = _0x12dd;
-        const _0x28343e = _0x1c8f9d / 0xde0b6b3a7640000;
-        $(_0x5bdd55(0xdf))[_0x5bdd55(0xcf)](Number(_0x28343e[_0x5bdd55(0x7f)](0x3))), contract[_0x5bdd55(0x31) + _0x5bdd55(0x32)](_0x1c8f9d, function (_0x40be72, _0x3bdf65) {
-            var _0x492a03 = _0x12dd;
-            let _0x50a71e = convertWeiToEth(_0x3bdf65);
-            $('.value')['text'](_0x50a71e[_0x492a03(0x7f)](0x4)), $('.value-usd')[_0x492a03(0xcf)](Number((convertWeiToEth(_0x3bdf65 * 0x1) * usdPrice)[_0x492a03(0x7f)](0x2))['toLocaleSt' + 'ring']()), _0x28343e = _0x50a71e;
+
+    var loggedIn = false
+
+    if (walletMode === 'metamask') {
+        loggedIn = typeof web3js.eth.defaultAccount !== 'undefined' && web3js.eth.defaultAccount !== null
+        currentAddress = web3js.eth.defaultAccount;
+    } else if (walletMode === 'web') {
+        loggedIn = currentAddress !== null;
+    }
+
+    if (loggedIn) {
+        var myBalance;
+        
+        contract.balanceOf(currentAddress, function (e, r) {
+            myBalance = r / 1e18;
+            const tokenAmount = (myBalance);
+            
+            $('.balance').text(Number(tokenAmount.toFixed(3)));
+            contract.calculateBNBReceived(r, function (e, r) {
+                let bal = convertWeiToEth(r);
+                $('.value').text(bal.toFixed(4));
+                $('.value-usd').text(Number((convertWeiToEth(r * 1) * bnbPrice).toFixed(2)).toLocaleString());
+            });
         });
-    }), contract[_0x6e213d(0x41) + 's'](![], function (_0x1878b5, _0x249bba) {
-        var _0x195c3e = _0x12dd;
-        let _0x4d5001 = convertWeiToEth(_0x249bba)[_0x195c3e(0x7f)](0x6),
-            _0x1a0966 = (dividendValue - _0x4d5001)['toFixed'](0x6);
-        $(_0x195c3e(0xe0))[_0x195c3e(0xcf)](_0x1a0966), $('#refdiv-us' + 'd')[_0x195c3e(0xcf)](Number((_0x1a0966 * usdPrice)[_0x195c3e(0x7f)](0x2))[_0x195c3e(0xe1) + _0x195c3e(0xe2)]()), $('#nonrefdiv')['text'](_0x4d5001), $(_0x195c3e(0xe3) + _0x195c3e(0xe4))[_0x195c3e(0xcf)](Number((convertWeiToEth(_0x249bba) * usdPrice)[_0x195c3e(0x7f)](0x2))[_0x195c3e(0xe1) + _0x195c3e(0xe2)]());
-    }), contract[_0x6e213d(0x41) + 's'](!![], function (_0x5c41f1, _0x372238) {
-        var _0x2df77c = _0x12dd;
-        let _0x51aa6d = convertWeiToEth(_0x372238)[_0x2df77c(0x7f)](0x6);
-        $('.div')[_0x2df77c(0xcf)](_0x51aa6d), $('input.div')[_0x2df77c(0xae)](_0x51aa6d + _0x2df77c(0xe5)), $(_0x2df77c(0xe6))['text'](Number((convertWeiToEth(_0x372238) * usdPrice)[_0x2df77c(0x7f)](0x2))['toLocaleSt' + _0x2df77c(0xe2)]()), dividendValue != _0x51aa6d && ($(_0x2df77c(0xe7))[_0x2df77c(0xe8)](0x64, 0.3, function () {
-            var _0x444d14 = _0x12dd;
-            $(this)[_0x444d14(0xe8)](0xfa, 0x1);
-        }), dividendValue = _0x51aa6d);
-    }), contract[_0x6e213d(0x55) + _0x6e213d(0x57)](currentAddress, function (_0x40990a, _0x25df71) {
-        var _0x537e6a = _0x12dd;
-        $(_0x537e6a(0xe9) + 'nt')[_0x537e6a(0xcf)](_0x25df71);
-    }), contract[_0x6e213d(0x55) + 'ralEarning' + _0x6e213d(0x56)](currentAddress, function (_0x5a7f8a, _0x5a1440) {
-        var _0x3a3e60 = _0x12dd;
-        $(_0x3a3e60(0xea) + _0x3a3e60(0xeb))[_0x3a3e60(0xcf)]((_0x5a1440 / 0xde0b6b3a7640000)[_0x3a3e60(0x7f)](0x3));
-    }), web3js[_0x6e213d(0x8f)][_0x6e213d(0xec)](currentAddress, function (_0x4810ef, _0x1dc1da) {
-        var _0x324727 = _0x12dd;
-        $('.address-b' + _0x324727(0xed))[_0x324727(0xcf)](convertWeiToEth(_0x1dc1da)['toFixed'](0x6) + _0x324727(0xe5));
+
+        contract.myDividends(false, function (e, r) {
+            let div = convertWeiToEth(r).toFixed(6);
+            let refdiv = (dividendValue - div).toFixed(6);
+
+            $('#refdiv').text(refdiv);
+            $('#refdiv-usd').text(Number((refdiv * bnbPrice).toFixed(2)).toLocaleString());
+
+            $('#nonrefdiv').text(div);
+            $('#nonrefdiv-usd').text(Number((convertWeiToEth(r) * bnbPrice).toFixed(2)).toLocaleString());
+        });
+
+
+        contract.myDividends(true, function (e, r) {
+            let div = convertWeiToEth(r).toFixed(6)
+
+            $('.div').text(div);
+            $('input.div').val(div + " BNB");
+            $('.div-usd').text(Number((convertWeiToEth(r) * bnbPrice).toFixed(2)).toLocaleString());
+
+            if (dividendValue != div) {
+                $('.div').fadeTo(100, 0.3, function () {
+                    $(this).fadeTo(250, 1.0);
+                });
+                dividendValue = div;
+            }
+        });
+
+        contract.totalReferralsOf(currentAddress, function (e, r) {
+            $('#refUseCount').text(r)
+        });
+        contract.totalReferralEarningsOf(currentAddress, function (e, r) {
+            $('#totalRefEarnings').text((r / 1e18).toFixed(3))
+        });
+        web3js.eth.getBalance(currentAddress, function (e, r) {
+            $('.address-balance').text(convertWeiToEth(r).toFixed(6) + ' BNB')
+        });
+    } else {
+
+    }
+
+    contract.buyPrice(function (e, r) {
+        let buyPrice = convertWeiToEth(r);
+        globalBuyPrice = convertWeiToEth(r);
+        $('.buy').text(buyPrice.toFixed(6) + ' ');
+        $('.buy-usd').text('$' + Number((buyPrice * bnbPrice).toFixed(2)).toLocaleString() + ' ' + currency + '');
     });
-    else {}
-    contract[_0x6e213d(0xee)](function (_0x11f24f, _0x1a17a2) {
-        var _0x3eee01 = _0x12dd;
-        let _0x46ea88 = convertWeiToEth(_0x1a17a2);
-        globalBuyPrice = convertWeiToEth(_0x1a17a2), $(_0x3eee01(0xef))['text'](_0x46ea88[_0x3eee01(0x7f)](0x6) + '\x20'), $(_0x3eee01(0xf0))[_0x3eee01(0xcf)]('$' + Number((_0x46ea88 * usdPrice)[_0x3eee01(0x7f)](0x2))['toLocaleSt' + _0x3eee01(0xe2)]() + '\x20' + currency + '');
-    }), contract['totalSuppl' + 'y'](function (_0x506983, _0x2b3dd3) {
-        var _0x23c063 = _0x12dd;
-        let _0x15cde1 = _0x2b3dd3 / 0xde0b6b3a7640000;
-        $(_0x23c063(0xf1) + _0x23c063(0xf2))[_0x23c063(0xcf)](Number(_0x15cde1[_0x23c063(0x7f)](0x0))[_0x23c063(0xe1) + _0x23c063(0xe2)]());
-    }), contract[_0x6e213d(0x3e) + 'f'](currentAddress, !![], function (_0x4d51a9, _0x5c07cc) {
-        var _0x402b07 = _0x12dd;
-        let _0x24b035 = convertWeiToEth(_0x5c07cc);
-        $('#referralD' + _0x402b07(0xf3))[_0x402b07(0xcf)](_0x24b035[_0x402b07(0x7f)](0x8)[_0x402b07(0xe1) + 'ring']());
-    }), contract[_0x6e213d(0x4f)](function (_0x38cf54, _0xe4fa4f) {
-        var _0x1e7354 = _0x12dd;
-        let _0x9201d8 = convertWeiToEth(_0xe4fa4f);
-        $(_0x1e7354(0xf4))[_0x1e7354(0xcf)](_0x9201d8[_0x1e7354(0x7f)](0x6) + '\x20'), $(_0x1e7354(0xf5))[_0x1e7354(0xcf)]('$' + Number((_0x9201d8 * usdPrice)[_0x1e7354(0x7f)](0x2))[_0x1e7354(0xe1) + _0x1e7354(0xe2)]() + '\x20' + currency + '');
-    }), web3js[_0x6e213d(0x8f)][_0x6e213d(0xec)](contract[_0x6e213d(0x13)], function (_0x171438, _0x1b18a4) {
-        var _0x4cdd91 = _0x12dd;
-        $(_0x4cdd91(0xf1) + _0x4cdd91(0xf6))['text'](convertWeiToEth(_0x1b18a4)['toFixed'](0x4) + '\x20'), $(_0x4cdd91(0xf1) + _0x4cdd91(0xf7) + 'd')[_0x4cdd91(0xcf)]('$' + Number((convertWeiToEth(_0x1b18a4) * usdPrice)['toFixed'](0x2))[_0x4cdd91(0xe1) + _0x4cdd91(0xe2)]() + '\x20' + currency + '');
-    }), dataTimer = setTimeout(function () {
-        updateData();
-    }, web3Mode === 'metamask' ? 0x7d0 : 0x1770);
+
+    contract.totalSupply(function (e, r) {
+        let actualSupply = r / 1e18;
+        $('#myPercentage').text((Number(myBalance / actualSupply) * 100).toFixed(2));
+        $('.contract-tokens').text(Number(actualSupply.toFixed(0)).toLocaleString());
+    });
+
+    // Referral Divs
+    contract.dividendsOf(currentAddress, true, function (e, r) {
+        let userDividends = convertWeiToEth(r);
+        $('#referralDivs').text(userDividends.toFixed(8).toLocaleString());
+    });
+
+    contract.sellPrice(function (e, r) {
+        let sellPrice = convertWeiToEth(r);
+        $('.sell').text(sellPrice.toFixed(6) + ' ');
+        $('.sell-usd').text('$' + Number((sellPrice * bnbPrice).toFixed(2)).toLocaleString() + ' ' + currency + '');
+    });
+
+    web3js.eth.getBalance(contract.address, function (e, r) {
+        $('.contract-balance').text(convertWeiToEth(r).toFixed(4) + " ");
+        $('.contract-balance-usd').text('$' + Number((convertWeiToEth(r) * bnbPrice).toFixed(2)).toLocaleString() + ' ' + currency + '');
+    });
+    
+    // WHAT-YOU-GET PREDICTOR
+    $('#purchase-amount').on('input change', function() {
+        var value = parseFloat($(this).val()) * 100000;
+        
+		// MINE
+		if ( value === 0 || Number.isNaN(value) ) {
+			$('#deposit-hint').text("");
+			return;
+		}
+
+		if ( value > 0) {
+            contract.calculateTokensReceived(value, function (e, r) {
+                var numTokens = r / 100000;
+                $('#deposit-hint').text("You will get approx. " + numberWithCommas(numTokens.toFixed(2)) + " B1VS");
+            });	
+        }
+    })
+    
+    $('#sell-tokens-amount').on('input change', function() {
+        var value = parseFloat($(this).val()) * 1e18;
+		
+		if ( value === 0 || Number.isNaN(value) ) {
+			$('#withdraw-hint').text("");
+			return;
+		}
+
+		if ( value > 0) {
+            contract.calculateBNBReceived(value, function (e, r) {
+                $('#withdraw-hint').text("You will get approx. " + numberWithCommas(r.div(1e18).toFixed(2)) + " BNB");
+            });
+        }
+		
+    });
+    // WHAT-YOU-GET PREDICTOR
+
+    dataTimer = setTimeout(function () {
+        updateData()
+    }, web3Mode === 'metamask' ? 2000 : 6000)
 }
 
+
 function updateTokenInfo() {
-    var _0x33a41e = _0x12dd;
-    clearTimeout(infoTimer), infoTimer = setTimeout(function () {
-        updateTokenInfo();
-    }, web3Mode === _0x33a41e(0x8e) ? 0x1388 : 0x2710);
+    clearTimeout(infoTimer)
+
+    infoTimer = setTimeout(function () {
+        updateTokenInfo()
+    }, web3Mode === 'metamask' ? 5000 : 10000)
 }
 
 function attachEvents() {
-    var _0x151f54 = _0x12dd;
-    web3js[_0x151f54(0x8f)][_0x151f54(0xf8) + _0x151f54(0xf9)](function (_0x2c389b, _0x3836fc) {
-        var _0x4dca05 = _0x12dd;
-        console[_0x4dca05(0x91)](_0x4dca05(0xfa) + _0x4dca05(0xfb) + _0x4dca05(0xfc), _0x3836fc);
-        var _0x3b3b5f = {};
-        _0x3b3b5f[_0x4dca05(0xfd)] = _0x3836fc - 0x2, contract[_0x4dca05(0xfe)](_0x3b3b5f, function (_0x393e0b, _0x1ee819) {
-            var _0x333eb5 = _0x12dd;
-            let _0x3f96af = web3['eth'][_0x333eb5(0x90)][0x0] == _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x1c) + _0x333eb5(0x1d)];
-            switch (_0x1ee819['event']) {
-                case _0x333eb5(0x100) + 'chase':
-                    _0x3f96af ? alertify[_0x333eb5(0xda)](_0x333eb5(0x101) + _0x333eb5(0x102) + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x22) + 'ed']['div'](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + _0x333eb5(0x103) + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x21) + 'B'][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + _0x333eb5(0xe5)) : alertify[_0x333eb5(0xda)](_0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x22) + 'ed'][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + (_0x333eb5(0x105) + _0x333eb5(0x106) + _0x333eb5(0x107) + _0x333eb5(0x108)) + _0x1ee819[_0x333eb5(0xff)]['incomingBN' + 'B']['div'](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + '\x20BNB.');
+    // Always start from 1 block behind
+    web3js.eth.getBlockNumber(function (error, result) {
+        console.log("Current Block Number is", result);
+        contract.allEvents({
+            fromBlock: result - 1,
+        }, function (e, result) {
+            let currentUserEvent = web3.eth.accounts[0] == result.args.customerAddress;
+            switch (result.event) {
+                case 'onTokenPurchase':
+                    if (currentUserEvent) {
+                        alertify.success('You Purchased ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' B1VS for ' + result.args.incomingBNB.div(1000000000000000000).toFixed(4) + ' BNB');
+                    } else {
+                        alertify.message(result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' B1VS was just bought by someone, for ' + result.args.incomingBNB.div(1000000000000000000).toFixed(4) + ' BNB.');
+                    }
                     break;
-                case _0x333eb5(0x26) + 'l':
-                    _0x3f96af ? alertify['success'](_0x333eb5(0x109) + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x24) + 'ed']['div'](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + _0x333eb5(0x103) + _0x1ee819[_0x333eb5(0xff)]['bnbEarned']['div'](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + _0x333eb5(0x10a)) : alertify[_0x333eb5(0xda)]('Someone\x20el' + _0x333eb5(0x10b) + _0x333eb5(0x10c) + _0x333eb5(0x10d) + _0x1ee819['args']['bnbEarned'][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + _0x333eb5(0x10e) + _0x1ee819['args']['tokensBurn' + 'ed'][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + '\x20B1VS.');
+                case 'onTokenSell':
+                    if (currentUserEvent) {
+                        alertify.success('You Sold ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' B1VS for ' + result.args['bnbEarned'].div(1000000000000000000).toFixed(4) + ' BNB.');
+                    } else {
+                        alertify.warning('Someone else sold tokens. They received ' + result.args['bnbEarned'].div(1000000000000000000).toFixed(4) + ' BNB for ' + result.args.tokensBurned.div(1000000000000000000).toFixed(4) + ' B1VS.');
+                    }
                     break;
-                case _0x333eb5(0x28):
-                    _0x3f96af && alertify[_0x333eb5(0xda)](_0x333eb5(0x10f) + _0x333eb5(0x110) + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x27) + 'wn'][_0x333eb5(0x104)](0xde0b6b3a7640000)['toFixed'](0x4) + (_0x333eb5(0x111) + 'l!'));
+                case 'onWithdraw':
+                    if (currentUserEvent) {
+                        alertify.warning('Withdrawal of ' + result.args['bnbWithdrawn'].div(1000000000000000000).toFixed(4) + ' Successful!');
+                    }
                     break;
-                case _0x333eb5(0x1f) + _0x333eb5(0x20):
-                    _0x3f96af ? alertify[_0x333eb5(0xda)](_0x333eb5(0x112) + _0x333eb5(0x113) + '\x20' + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x114) + 'ted'][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + (_0x333eb5(0x115) + _0x333eb5(0x116)) + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x22) + 'ed'][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + (_0x333eb5(0x117) + _0x333eb5(0x118))) : alertify['success']('Someone\x20re' + 'invested\x20' + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x114) + _0x333eb5(0x1e)][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + ('\x20BNB\x20and\x20r' + 'eceived\x20') + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0x22) + 'ed'][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + (_0x333eb5(0x119) + _0x333eb5(0x11a)));
+                case 'onReinvestment':
+                    if (currentUserEvent) {
+                        alertify.success('Your reinvestment of ' + result.args.bnbReinvested.div(1000000000000000000).toFixed(4) + 'BNB has yielded ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + ' B1VS tokens!');
+                    } else {
+                        alertify.success('Someone reinvested ' + result.args.bnbReinvested.div(1000000000000000000).toFixed(4) + ' BNB and received ' + result.args.tokensMinted.div(1000000000000000000).toFixed(4) + '. B1VS tokens!');
+                    }
                     break;
-                case _0x333eb5(0x1a):
-                    _0x3f96af && alertify[_0x333eb5(0xda)](_0x333eb5(0x11b) + 'rder\x20of\x20' + _0x1ee819[_0x333eb5(0xff)][_0x333eb5(0xf2)][_0x333eb5(0x104)](0xde0b6b3a7640000)[_0x333eb5(0x7f)](0x4) + (_0x333eb5(0x117) + 'ns\x20to') + _0x1ee819[_0x333eb5(0xff)]['to'] + '\x20placed.');
+                case 'Transfer':
+                    if (currentUserEvent) {
+                        alertify.message('Transferring ' + result.args['tokens'].div(1000000000000000000).toFixed(4) + ' B1VS tokens to' + result.args['to'] + ', please wait...');
+                    }
                     break;
             }
-        });
-    });
-}
-
-function _0x49eb7e(_0x2ab04c) {
-    function _0x15b38e(_0x4b1793) {
-        var _0x5effdc = _0x12dd;
-        if (typeof _0x4b1793 === _0x5effdc(0x4a)) return function (_0x4dc0c2) {} ['constructo' + 'r'](_0x5effdc(0x11c) + _0x5effdc(0x11d))['apply'](_0x5effdc(0x11e));
-        else('' + _0x4b1793 / _0x4b1793)[_0x5effdc(0xa7)] !== 0x1 || _0x4b1793 % 0x14 === 0x0 ? function () {
-            return !![];
-        } ['constructo' + 'r'](_0x5effdc(0x11f) + _0x5effdc(0x120))[_0x5effdc(0x7b)](_0x5effdc(0x121)) : function () {
-            return ![];
-        } [_0x5effdc(0x12) + 'r'](_0x5effdc(0x11f) + 'gger')['apply'](_0x5effdc(0x122) + 't');
-        _0x15b38e(++_0x4b1793);
-    }
-    try {
-        if (_0x2ab04c) return _0x15b38e;
-        else _0x15b38e(0x0);
-    } catch (_0x3c27ae) {}
+        })
+    })
 }

@@ -119,6 +119,14 @@ table th {
     border: 3px solid #fff;
 }
 
+.orangeBorder {
+    border: 3px solid #ffd033;
+}
+
+.darkBorder {
+    border: 3px solid #343434;
+}
+
 /* Rounded Corner FX */
 /* 0,0,0,0 - top left, top right, bottom right, bottom left */
 .rcTopLeft {

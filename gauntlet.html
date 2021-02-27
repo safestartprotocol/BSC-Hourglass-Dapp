@@ -109,46 +109,22 @@
 
     <main style="margin-top: 120px;">
         <div class="container">
-            <div class="jumbotron bg-primary text-white roundedCorners whiteBorder">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <h1 class="text-white">
-                                <img src="assets/img/logo.png" width="35px" height="35px" /> Function B1VS <img src="assets/img/logo.png" width="35px" height="35px" />
-                            </h1>
-                            <p><i>Function Island&apos;s Hourglass Game on BSC</i></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dapps Row -->
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <a href="dashboard.html" class="btn btn-block btn-md btn-success roundedCorners">My Account</a><br />
-                </div>
-
-                <div class="col-md-6 text-center">
-                    <a href="index.html" class="btn btn-block btn-md btn-dark roundedCorners">Go Home</a><br />
-                </div>
-            </div>
-
             <div class="row">
                 <div class="col-md-6">
-                    <div class="card bg-primary text-white whiteBorder roundedCorners">
+                    <div class="card bg-primary text-white darkBorder roundedCorners">
                         <div class="card-header">
                             <h4 class="text-white">My Gauntlet</h4>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col text-center">
-                                    <h4 class="text-white"><span id="myb1vsbalance">0 B1VS</span></h4>
-                                    <small>Balance</small>
+                                    <h3 class="text-warning"><span id="myb1vsbalance">0 B1VS</span></h3>
+                                    <p class="text-white">Gauntlet Balance</p>
                                 </div>
 
                                 <div class="col text-center">
-                                    <h4 class="text-white"><span id="mydividends">0 BNB</span></h4>
-                                    <small>Dividends</small>
+                                    <h3 class="text-warning"><span id="mydividends">0 BNB</span></h3>
+                                    <p class="text-white">Gauntlet Dividends</p>
                                 </div>
                             </div>
                         </div>
@@ -162,23 +138,24 @@
                             </div>
                         </div>
                     </div>
+                    <br />
                 </div>
 
                 <div class="col-md-6">
-                    <div class="card bg-primary text-white whiteBorder roundedCorners">
+                    <div class="card bg-primary text-white darkBorder roundedCorners">
                         <div class="card-header">
                             <h4 class="text-white">Gauntlet Details</h4>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col text-center">
-                                    <h4 class="text-white"><span id="mystatus">-</span></h4>
-                                    <small>Current Status</small>
+                                    <h3 class="text-white"><span id="mystatus">-</span></h3>
+                                    <p class="text-white">Current Status</p>
                                 </div>
 
                                 <div class="col text-center">
-                                    <h4 class="text-white"><span id="daysUntil">-</span></h4>
-                                    <small>Lock Days</small>
+                                    <h3 class="text-white"><span id="daysUntil">-</span></h3>
+                                    <p class="text-white">Lock Days</p>
                                 </div>
                             </div>
                         </div>
@@ -204,36 +181,86 @@
                     <span id="mystronghand"></span>
                 </div>
             </div>
-            <hr />
-
-            <div class="row">
+            <br />
+            
+            <div id="setupPanel" class="row">
                 <div class="col text-center">
-                    <div class="card bg-primary text-white whiteBorder roundedCorners">
+                    <div class="card bg-primary text-white darkBorder roundedCorners">
                         <div class="card-header">
                             <h4 class="text-white">Gauntlet Controls</h4>
                         </div>
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col text-center">
-                                    <span id="setupPanel"></span>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h3 class="text-white">Create a Gauntlet</h3>
+                                        <input id="locktime" type="number" placeholder="LOCK TIME (days)" min="0" step="1" class="form-control roundedCorners" /><br />
+                                        <button type="button" onclick="getStrong()" class="btn btn-block btn-lg btn-dark btn-outline-success roundedCorners">Create your Gauntlet!</button>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col text-center" id="myDepositPanel">
-                                    <h3 class="text-white">Deposit BNB &amp; lock B1VS</h3>
-                                    <input id="buyamount" type="number" placeholder="Amount to spend (BNB)" class="form-control roundedCorners" /><br />
-                                    <button type="button" onclick="buyB1VS()" class="btn btn-md btn-dark btn-block btn-outline-success roundedCorners">Buy/Lock up B1VS</button>
-                                </div>
-
-                                <div class="col text-center" id="myTimePanel">
-                                    <h3 class="text-white">Extend your Time</h3>
-                                    <input id="extendlocktime" type="number" placeholder="lock time (days)" min="1" step="1" class="form-control roundedCorners" /><br />
-                                    <button type="button" onclick="extendLock()" class="btn btn-md btn-dark btn-block btn-outline-warning roundedCorners">Extend Lock Time</button>
+                        </div>
+                        <div class="card-footer">
+                        
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="myDepositPanel" class="col-md-6 text-center">
+                    <div class="card bg-primary text-white darkBorder roundedCorners">
+                        <div class="card-header text-left">
+                            <h4 class="text-white">Deposit BNB</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <input id="buyamount" type="number" placeholder="Amount to spend (BNB)" class="form-control roundedCorners" /><br />
+                                        <button type="button" onclick="buyB1VS()" class="btn btn-md btn-dark btn-block btn-outline-success roundedCorners">Buy/Lock up B1VS</button>
+                                    </div>
                                 </div>
                             </div>
-                            <hr />
+                        </div>
+                        <div class="card-footer">
+                            
+                        </div>
+                    </div>
+                    <br />
+                </div>
+                
+                <div class="col-md-6 text-center">
+                    <div id="myTimePanel" class="card bg-primary text-white darkBorder roundedCorners">
+                        <div class="card-header text-left">
+                            <h4 class="text-white">Extend your Time</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <input id="extendlocktime" type="number" placeholder="lock time (days)" min="1" step="1" class="form-control roundedCorners" /><br />
+                                        <button type="button" onclick="extendLock()" class="btn btn-md btn-dark btn-block btn-outline-warning roundedCorners">Extend Lock Time</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="col text-center">
+                    <div class="card bg-primary text-white darkBorder roundedCorners">
+                        <div class="card-header">
+                            <h4 class="text-white">Gauntlet Controls</h4>
+                        </div>
+                        <div class="card-body">
                             <div class="row">
                                 <div class="col text-center" id="myControlsPanel">
                                     <h3 class="text-white">Collect &amp; Reinvest</h3>
@@ -244,7 +271,7 @@
                             <hr />
 
                             <div class="row">
-                                <div class="col text-center" id="mySellPanel">
+                                <div id="mySellPanel" class="col text-center">
                                     <h3 class="text-success">UNLOCKED</h3>
                                     <strong>Sell B1VS</strong>
                                     <input id="sellamount" type="number" placeholder="Amount to Sell (B1VS)" class="form-control roundedCorners" /><br />
@@ -317,6 +344,7 @@
 
     <!-- Contract Scripts -->
     <script>
+        $("#setupPanel").hide();
         $("#myDepositPanel").hide();
         $('#myTimePanel').hide();
         $('#myControlsPanel').hide();
