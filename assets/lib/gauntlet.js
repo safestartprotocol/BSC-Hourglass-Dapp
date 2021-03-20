@@ -72,7 +72,7 @@ function myStrongHand() {
                             el('#lockedUntil').innerHTML = (_until.getDate() + "/" + (_until.getMonth() + 1) + "/" + _until.getFullYear());
                         });
                     } else {
-                        el('#mySellPanel').show();
+                        $('#mySellPanel').show();
                     }
                 });
 
